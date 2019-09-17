@@ -1,0 +1,37 @@
+ion-menu-button{
+    color: white;
+}
+
+ion-content{
+    --ion-background-color:#101010; 
+}
+
+ion-header{
+    --ion-background-color:black; 
+}
+
+ion-title{
+    color: white;
+    font-size: 30px;
+}
+
+ion-item{
+    --ion-background-color:#101010; 
+    color:white;
+    border: 1px solid;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-top-width: 1px;
+    padding: 5px;
+    box-shadow: 1px 1px gray;
+}
+
+ion-icon{
+    font-size: 35px;
+    color:white;
+}
+
+label{
+    font-size: 25px;
+    margin-left: 10px;
+}

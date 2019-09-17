@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="!isSearchbarOpened">
+      Todos
+    </ion-title>
+    <ion-searchbar placeholder="Pesquisa" *ngIf="isSearchbarOpened" showCancelButton="true" (search)="onSearch($event)" (ionCancel)="isSearchbarOpened=false"></ion-searchbar>
+    <ion-buttons slot="end">
+        <ion-button icon-only *ngIf="!isSearchbarOpened" (click)="isSearchbarOpened=true">
+          <ion-icon name="md-search" style="color: white"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    
+  <ion-refresher slot="fixed" 
+  (ionRefresh)="ionRefresh($event)" 
+  (ionPull)="ionPull($event)" 
+  (ionStart)="ionStart($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Puxe para atualizar"
+      refreshingSpinner="circles"
+      refreshingText="Atualizando...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-item routerLink="/" class="img2">
+    <img src="/assets/img/gta.jpg" >
+    <ion-label>GTA SAN ANDREAS</ion-label>
+  </ion-item>
+    
+  <ion-item routerLink="/" class="img1">
+    <img src="/assets/img/gta-vice.jpg">
+    <ion-label>GTA VICE CITY</ion-label>
+  </ion-item>
+
+  <ion-item routerLink="/" class="img2">
+    <img src="/assets/img/gta.jpg" >
+    <ion-label>GTA SAN ANDREAS</ion-label>
+  </ion-item>
+    
+  <ion-item routerLink="/" class="img1">
+    <img src="/assets/img/gta-vice.jpg">
+    <ion-label>GTA VICE CITY</ion-label>
+  </ion-item>
+  
+  <ion-item routerLink="/" class="img2">
+    <img src="/assets/img/gta.jpg" >
+    <ion-label>GTA SAN ANDREAS</ion-label>
+  </ion-item>
+      
+  <ion-item routerLink="/" class="img1">
+    <img src="/assets/img/gta-vice.jpg">
+    <ion-label>GTA VICE CITY</ion-label>
+  </ion-item>
+  
+
+  
+
+
+
+
+
+
+
+</ion-content>

@@ -4,23 +4,37 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'tela-login',
     pathMatch: 'full'
   },
+  
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
   },
   {
     path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+    loadChildren: () => import('./pages/list/list.module').then(m => m.ListPageModule)
+  },
+  { path: 'pagina-inicial', loadChildren: './pages/pagina-inicial/pagina-inicial.module#PaginaInicialPageModule' },
+  { path: 'pagina-inicial', loadChildren: './pages/pagina-inicial/pagina-inicial.module#PaginaInicialPageModule' },
+  { path: 'sobre', loadChildren: './pages/sobre/sobre.module#SobrePageModule' },
+  { path: 'tela-login', loadChildren: './pages/tela-login/tela-login.module#TelaLoginPageModule' },
+  { path: 'configuracoes', loadChildren: './pages/configuracoes/configuracoes.module#ConfiguracoesPageModule' },
+  { path: 'politica', loadChildren: './pages/politica/politica.module#PoliticaPageModule' },
+  { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
+  { path: 'destaque', loadChildren: './pages/destaque/destaque.module#DestaquePageModule' },
+  { path: 'pagina-jogo', loadChildren: './pages/pagina-jogo/pagina-jogo.module#PaginaJogoPageModule' },
+  { path: 'perfil', loadChildren: './pages/perfil/perfil.module#PerfilPageModule' },
+  { path: 'amigos', loadChildren: './pages/amigos/amigos.module#AmigosPageModule' },
+  { path: 'pagina-amigos', loadChildren: './pages/pagina-amigos/pagina-amigos.module#PaginaAmigosPageModule' }
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  
 })
 export class AppRoutingModule {}

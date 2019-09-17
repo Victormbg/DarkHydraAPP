@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="!isSearchbarOpened">
+      Biblioteca
+    </ion-title>
+    <ion-searchbar placeholder="Pesquisa" *ngIf="isSearchbarOpened" showCancelButton="true" (search)="onSearch($event)" (ionCancel)="isSearchbarOpened=false"></ion-searchbar>
+    <ion-buttons slot="end">
+        <ion-button icon-only *ngIf="!isSearchbarOpened" (click)="isSearchbarOpened=true">
+          <ion-icon name="md-search" style="color: white"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+ 
+  <ion-refresher slot="fixed"
+    (ionRefresh)="ionRefresh($event)" 
+    (ionPull)="ionPull($event)" 
+    (ionStart)="ionStart($event)">
+    <ion-refresher-content
+      class="atualizar"  
+      pullingIcon="arrow-dropdown"
+      pullingText="Puxe para atualizar"
+      refreshingSpinner="circles"
+      refreshingText="Atualizando...">
+    </ion-refresher-content>
+  </ion-refresher>  
+
+  <ion-list>
+  <!--
+  <ion-item routerLink="/pagina-jogo" class="img1">
+    <img src="/assets/img/sonic.jpg">
+    <ion-label>Sonic The Hedgehog</ion-label>
+  </ion-item>
+  
+  <ion-item routerLink="/pagina-jogo" class="img2">
+    <img src="/assets/img/sonic2.jpg" >
+    <ion-label>Sonic The Hedgehog 2</ion-label>
+  </ion-item>
+    
+  <ion-item routerLink="/pagina-jogo" class="img1">
+    <img src="/assets/img/sonic.jpg">
+    <ion-label>Sonic The Hedgehog</ion-label>
+  </ion-item>
+  
+  <ion-item routerLink="/pagina-jogo" class="img2">
+    <img src="/assets/img/sonic2.jpg" >
+    <ion-label>Sonic The Hedgehog 2</ion-label>
+  </ion-item>
+  
+  <ion-item routerLink="/pagina-jogo" class="img1">
+    <img src="/assets/img/sonic.jpg">
+    <ion-label>Sonic The Hedgehog</ion-label>
+  </ion-item>
+  
+  <ion-item routerLink="/pagina-jogo" class="img2">
+    <img src="/assets/img/sonic2.jpg" >
+    <ion-label>Sonic The Hedgehog 2</ion-label>
+  </ion-item>
+  -->
+  <ion-item *ngFor="let item of (resultado | async)" routerLink="['/pagina-jogo/'+idJogo]">
+      <img src="{{item.imagem1}}" >   
+      <ion-label>{{item.tituloJogo}}</ion-label>
+  </ion-item>
+  
+</ion-list>
+</ion-content>

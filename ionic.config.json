@@ -1,5 +1,7 @@
 {
   "name": "Dark_Hydra",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
