@@ -12,20 +12,9 @@ import { MenuController } from '@ionic/angular';
 })
 export class HomePage implements OnInit{
   resultado: Observable<any>;
-
-  //jogos: Observable<any>;
-  //aqui o import da classe 
-  //listajogo:Jogos[];
   
   public isSearchbarOpened = false;
     constructor(public navCtrl: NavController,public http: HttpClient,public jogo: JogosService,public menuCtrl: MenuController) {
-  /*
-    this.jogos = this.http.get('http://10.0.0.5:8080/jogos?apikey=scadifcabif');
-    this.jogos.subscribe(
-      data => {
-      console.log('my data: ', data);
-    })
-  */
   }
 
   ionRefresh(event) {
@@ -43,10 +32,10 @@ export class HomePage implements OnInit{
   }
 
   ngOnInit() {
-    this.listaPaises();
+    this.listaJogos();
   }
   
-  listaPaises(){
+  listaJogos(){
     this.resultado = this.jogo.listar();
     console.log(this.resultado);
   }
@@ -54,26 +43,4 @@ export class HomePage implements OnInit{
   ionViewWillEnter(){
     this.menuCtrl.enable(true);
   }
-
-  /*
-
- 
-  onSearch(event){
-    console.log(event.target.value);
-  }
-  
- ngOnInit() {
-  this.listajogos();
-  }
-
-  listajogos(){
-
-    this.http.get<Jogos[]>("http://10.0.0.5:8080/jogos?apikey=scadifcabif").subscribe(
-      result=>{
-        this.listajogo=result
-      }
-    )
-  }
-  */
- 
 }

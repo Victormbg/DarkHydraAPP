@@ -17,7 +17,38 @@ export class JogosService {
     return this.http.get<Jogos[]>(this.url);
   }
 
-  //getJogoId(id) {
-   // return this.http.get<Jogos[]>(this.idJogo).valueChanges();
-  //}
+  getJogoId(idJogo) {
+    return this.http.get<Jogos[]>(`${this.url}?i=${idJogo}&plot=full`);
+  } 
+
+
+  /*
+  
+  
+  getJogoId(idJogo) {
+    return this.http.get<Jogos[]>(`${this.url}?i=${idJogo}&plot=full`);
+  }
+  
+  
+  
+  
+  
+  id = null;
+  produtos: {};
+
+  constructor(    private route: ActivatedRoute, 
+    private nav: NavController, 
+    private produtoSer: ProdutosService) { }
+
+  ngOnInit() {
+    this.id = this.route.snapshot.params['id'];
+
+    this.produtoSer.getContato(this.id).subscribe(res => {
+      this.produtos = res;
+      console.log(this.produtos);  
+    });
+    
+  }
+
+  */
 }

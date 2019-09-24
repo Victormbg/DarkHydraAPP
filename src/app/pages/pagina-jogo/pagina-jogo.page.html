@@ -3,28 +3,28 @@
       <ion-buttons slot="start">
           <ion-back-button defaultHref="home"></ion-back-button>
         </ion-buttons>
-    <ion-title *ngFor="let item of (resultado | async)">
-      {{item.tituloJogo}}
+    <ion-title>
+      {{ jogos?.tituloJogo }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
   <img src="" style="height: 100px; width: 100%;"alt="">
   <ion-content>
-    <ion-slides *ngFor="let item of (resultado | async)" pager="true">
+    <ion-slides pager="true">
         <ion-slide>
-            <img src="{{item.imagem2}}" >
+            <img src="{{ jogos?.imagem2 }}" >
         </ion-slide>
         <ion-slide>
-            <img src="{{item.imagem3}}" >
+            <img src="{{ jogos?.imagem3 }}" >
         </ion-slide>
         <ion-slide>
-            <img src="{{item.imagem4}}" >
+            <img src="{{ jogos?.imagem4}}" >
         </ion-slide>
       </ion-slides>
     <h2>DESCRICÃO DO JOGO</h2>
-    <p *ngFor="let item of (resultado | async)">
-      {{item.descJogo}}
+    <p>
+      {{ jogos?.descJogo}}
     </p>
     <h2>TAGS DO JOGO</h2>
     <p *ngFor="let item of (resultado | async)">

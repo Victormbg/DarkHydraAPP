@@ -28,11 +28,16 @@
       refreshingText="Atualizando...">
     </ion-refresher-content>
   </ion-refresher>  
-
+  <!--[routerLink]="['/pagina-jogo', item.id]"-->
   <ion-list>
-    <ion-item *ngFor="let item of (resultado | async)" [routerLink]="['/pagina-jogo', item.id]">
+    <ion-item *ngFor="let item of (resultado | async) " [routerLink]="['/pagina-jogo', item.imdbID]">
       <img src="{{item.imagem1}}" >   
       <ion-label>{{item.tituloJogo}}</ion-label>
     </ion-item>
   </ion-list>
+
+
+
+
+
 </ion-content>

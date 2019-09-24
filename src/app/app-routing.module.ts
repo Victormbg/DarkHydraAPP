@@ -17,7 +17,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/conta/list.module').then(m => m.ListPageModule)
   },
   { path: 'pagina-inicial', loadChildren: './pages/pagina-inicial/pagina-inicial.module#PaginaInicialPageModule' },
-  { path: 'pagina-inicial', loadChildren: './pages/pagina-inicial/pagina-inicial.module#PaginaInicialPageModule' },
   { path: 'sobre', loadChildren: './pages/sobre/sobre.module#SobrePageModule' },
   { path: 'tela-login', loadChildren: './pages/tela-login/tela-login.module#TelaLoginPageModule' },
   { path: 'configuracoes', loadChildren: './pages/configuracoes/configuracoes.module#ConfiguracoesPageModule' },
@@ -25,7 +24,7 @@ const routes: Routes = [
   { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
   { path: 'destaque', loadChildren: './pages/destaque/destaque.module#DestaquePageModule' },
   { path: 'pagina-jogo', loadChildren: './pages/pagina-jogo/pagina-jogo.module#PaginaJogoPageModule' },
-  { path: 'pagina-jogo/:id', loadChildren: './pages/pagina-jogo/pagina-jogo.module#PaginaJogoPageModule' },
+  { path: 'pagina-jogo/:idJogo', loadChildren: './pages/pagina-jogo/pagina-jogo.module#PaginaJogoPageModule' },
   { path: 'perfil', loadChildren: './pages/perfil/perfil.module#PerfilPageModule' },
   { path: 'amigos', loadChildren: './pages/amigos/amigos.module#AmigosPageModule' },
   { path: 'pagina-amigos', loadChildren: './pages/pagina-amigos/pagina-amigos.module#PaginaAmigosPageModule' }
