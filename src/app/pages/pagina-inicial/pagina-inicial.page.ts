@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { JogosService } from '../../services/jogos.service';
+import { JogosService , SearchType } from '../../services/jogos.service';
 import { MenuController } from '@ionic/angular';
 
 @Component({
@@ -13,15 +13,15 @@ import { MenuController } from '@ionic/angular';
 export class PaginaInicialPage implements OnInit {
   
   resultado: Observable<any>;
-
-  constructor(public navCtrl: NavController,public http: HttpClient,public jogo: JogosService,public menuCtrl: MenuController) { }
+  
+  constructor(public navCtrl: NavController,public http: HttpClient,public jogoSer: JogosService,public menuCtrl: MenuController) { }
 
   ngOnInit() {
     this.listaJogos();
   }
   
   listaJogos(){
-    this.resultado = this.jogo.listar();
+    this.resultado = this.jogoSer.listar();
     console.log(this.resultado);
   }
 
@@ -42,10 +42,6 @@ export class PaginaInicialPage implements OnInit {
     //Emitted when the user begins to start pulling down.
     console.log('ionStart Event Triggered!');
   }
-
-
-
-
 }
 
 

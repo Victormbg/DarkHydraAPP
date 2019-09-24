@@ -1,6 +1,6 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ViewChild } from '@angular/core';
-import {IonSlides} from '@ionic/angular';
+import { IonSlides } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -13,8 +13,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./pagina-jogo.page.scss'],
 })
 export class PaginaJogoPage implements OnInit {
-  
-  jogos = null;
+
+  jogos = [];
   id = null;
 
   @ViewChild(IonSlides, { static: true }) slides: IonSlides;
@@ -29,18 +29,23 @@ export class PaginaJogoPage implements OnInit {
   ngOnInit() {
     this.listaJogos();
     
+    let id = this.route.snapshot.paramMap.get('idJogo');
+ 
+    this.jogoSer.getJogoId(id).subscribe(result => {
+      this.jogos = result;
+      console.log(this.jogos);
+    });
+    
+  }
+    /*
+
     this.id = this.route.snapshot.params['idJogo'];
     
     this.jogoSer.getJogoId(this.id).subscribe(res => {
       this.jogos = res;
       console.log(this.jogos);  
     });
-  
-  }
-  
-  
-    /*
-  
+    
     // Get the ID that was passed with the URL
 
     let id = this.activatedRoute.snapshot.paramMap.get('idJogo');

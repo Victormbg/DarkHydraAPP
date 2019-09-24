@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
       <ion-buttons slot="start">
-          <ion-back-button defaultHref="home"></ion-back-button>
+          <ion-back-button defaultHref="/biblioteca"></ion-back-button>
         </ion-buttons>
     <ion-title>
       {{ jogos?.tituloJogo }}
@@ -24,11 +24,11 @@
       </ion-slides>
     <h2>DESCRICÃO DO JOGO</h2>
     <p>
-      {{ jogos?.descJogo}}
+      {{ jogos.descJogo}}
     </p>
     <h2>TAGS DO JOGO</h2>
-    <p *ngFor="let item of (resultado | async)">
-      {{item.tagsJogo}}
+    <p>
+      {{ jogos.tagsJogo}}
     </p>
 </ion-content>
 
