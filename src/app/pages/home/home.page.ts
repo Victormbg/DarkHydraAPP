@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { JogosService } from '../../services/jogos.service';
-
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +18,7 @@ export class HomePage implements OnInit{
   //listajogo:Jogos[];
   
   public isSearchbarOpened = false;
-    constructor(public navCtrl: NavController,public http: HttpClient,public jogo: JogosService) {
+    constructor(public navCtrl: NavController,public http: HttpClient,public jogo: JogosService,public menuCtrl: MenuController) {
   /*
     this.jogos = this.http.get('http://10.0.0.5:8080/jogos?apikey=scadifcabif');
     this.jogos.subscribe(
@@ -49,6 +49,10 @@ export class HomePage implements OnInit{
   listaPaises(){
     this.resultado = this.jogo.listar();
     console.log(this.resultado);
+  }
+
+  ionViewWillEnter(){
+    this.menuCtrl.enable(true);
   }
 
   /*
