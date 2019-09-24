@@ -16,4 +16,8 @@ export class JogosService {
   listar():Observable<Jogos[]>{
     return this.http.get<Jogos[]>(this.url);
   }
+
+  //getJogoId(id) {
+   // return this.http.get<Jogos[]>(this.idJogo).valueChanges();
+  //}
 }
