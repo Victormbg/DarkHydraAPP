@@ -13,9 +13,7 @@
         </ion-button>
     </ion-buttons>
   </ion-toolbar>
-  
 </ion-header>
-
 <ion-content>
  
   <ion-refresher slot="fixed"
@@ -32,41 +30,9 @@
   </ion-refresher>  
 
   <ion-list>
-  <!--
-  <ion-item routerLink="/pagina-jogo" class="img1">
-    <img src="/assets/img/sonic.jpg">
-    <ion-label>Sonic The Hedgehog</ion-label>
-  </ion-item>
-  
-  <ion-item routerLink="/pagina-jogo" class="img2">
-    <img src="/assets/img/sonic2.jpg" >
-    <ion-label>Sonic The Hedgehog 2</ion-label>
-  </ion-item>
-    
-  <ion-item routerLink="/pagina-jogo" class="img1">
-    <img src="/assets/img/sonic.jpg">
-    <ion-label>Sonic The Hedgehog</ion-label>
-  </ion-item>
-  
-  <ion-item routerLink="/pagina-jogo" class="img2">
-    <img src="/assets/img/sonic2.jpg" >
-    <ion-label>Sonic The Hedgehog 2</ion-label>
-  </ion-item>
-  
-  <ion-item routerLink="/pagina-jogo" class="img1">
-    <img src="/assets/img/sonic.jpg">
-    <ion-label>Sonic The Hedgehog</ion-label>
-  </ion-item>
-  
-  <ion-item routerLink="/pagina-jogo" class="img2">
-    <img src="/assets/img/sonic2.jpg" >
-    <ion-label>Sonic The Hedgehog 2</ion-label>
-  </ion-item>
-  -->
-  <ion-item *ngFor="let item of (resultado | async)" routerLink="['/pagina-jogo/'+idJogo]">
+    <ion-item *ngFor="let item of (resultado | async)" [routerLink]="['/pagina-jogo', item.id]">
       <img src="{{item.imagem1}}" >   
       <ion-label>{{item.tituloJogo}}</ion-label>
-  </ion-item>
-  
-</ion-list>
+    </ion-item>
+  </ion-list>
 </ion-content>

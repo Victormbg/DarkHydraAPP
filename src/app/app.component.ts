@@ -18,12 +18,12 @@ export class AppComponent {
     },
     {
       title: 'Bibliotecas',
-      url: '/home',
+      url: '/biblioteca',
       icon: 'folder-open'
     },
     {
       title: 'Conta',
-      url: '/list',
+      url: '/conta',
       icon: 'md-contact'
     },
     {

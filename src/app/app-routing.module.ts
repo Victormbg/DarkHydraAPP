@@ -9,12 +9,12 @@ const routes: Routes = [
   },
   
   {
-    path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
+    path: 'biblioteca',
+    loadChildren: () => import('./pages/biblioteca/home.module').then(m => m.HomePageModule)
   },
   {
-    path: 'list',
-    loadChildren: () => import('./pages/list/list.module').then(m => m.ListPageModule)
+    path: 'conta',
+    loadChildren: () => import('./pages/conta/list.module').then(m => m.ListPageModule)
   },
   { path: 'pagina-inicial', loadChildren: './pages/pagina-inicial/pagina-inicial.module#PaginaInicialPageModule' },
   { path: 'pagina-inicial', loadChildren: './pages/pagina-inicial/pagina-inicial.module#PaginaInicialPageModule' },
@@ -25,6 +25,7 @@ const routes: Routes = [
   { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
   { path: 'destaque', loadChildren: './pages/destaque/destaque.module#DestaquePageModule' },
   { path: 'pagina-jogo', loadChildren: './pages/pagina-jogo/pagina-jogo.module#PaginaJogoPageModule' },
+  { path: 'pagina-jogo/:id', loadChildren: './pages/pagina-jogo/pagina-jogo.module#PaginaJogoPageModule' },
   { path: 'perfil', loadChildren: './pages/perfil/perfil.module#PerfilPageModule' },
   { path: 'amigos', loadChildren: './pages/amigos/amigos.module#AmigosPageModule' },
   { path: 'pagina-amigos', loadChildren: './pages/pagina-amigos/pagina-amigos.module#PaginaAmigosPageModule' }
