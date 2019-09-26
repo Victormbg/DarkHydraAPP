@@ -12,10 +12,15 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './pagina-jogo.page.html',
   styleUrls: ['./pagina-jogo.page.scss'],
 })
+
 export class PaginaJogoPage implements OnInit {
 
-  jogos = [];
-  id = null;
+  tituloJogo : string;
+  descJogo: string;
+  tagsJogo: string;
+  
+  jogos = {};
+  idJogo = null;
 
   @ViewChild(IonSlides, { static: true }) slides: IonSlides;
   
@@ -29,10 +34,12 @@ export class PaginaJogoPage implements OnInit {
   ngOnInit() {
     this.listaJogos();
     
-    let id = this.route.snapshot.paramMap.get('idJogo');
- 
-    this.jogoSer.getJogoId(id).subscribe(result => {
-      this.jogos = result;
+    //let idJogo = this.route.snapshot.paramMap.get('idJogo');
+    
+    this.idJogo = this.route.snapshot.params['idJogo'];
+
+    this.jogoSer.getJogoId(this.idJogo).subscribe(res=> {
+      this.jogos = res;
       console.log(this.jogos);
     });
     
