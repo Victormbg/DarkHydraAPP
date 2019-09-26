@@ -30,18 +30,20 @@ export class JogosService {
   }
 
   getJogoId(idJogo){
-    return this.http.get<Jogos[]>(`${this.url1}?i=${idJogo}&apikey=${this.apiKey}`);
+    return this.http.get<Jogos[]>(`${this.url1}?idJogo=${idJogo}&apikey=${this.apiKey}`);
   } 
 
-  searchData(title: string, type: SearchType): Observable<any> {
-    return this.http.get(`${this.url}?s=${encodeURI(title)}&type=${type}&apikey=${this.apiKey}`).pipe(
-      map(results => results['Search'])
-    );
-  }
+  //searchData(title: string, type: SearchType): Observable<any> {
+   // return this.http.get(`${this.url}?s=${encodeURI(title)}&type=${type}&apikey=${this.apiKey}`).pipe(
+    //  map(results => results['Search'])
+   // );
+  //}
 
   /*
   
-  
+  https://sleepy-river-60466.herokuapp.com/jogos?i=1&apikey=scadifcabif&plot=full
+
+
   getJogoId(idJogo) {
     return this.http.get<Jogos[]>(`${this.url}?i=${idJogo}&plot=full`);
   }
