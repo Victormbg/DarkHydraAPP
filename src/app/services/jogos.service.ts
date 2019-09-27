@@ -31,6 +31,7 @@ export class JogosService {
 
   getJogoId(idJogo){
     return this.http.get<Jogos[]>(`${this.url1}?idJogo=${idJogo}&apikey=${this.apiKey}`);
+    //return this.http.get<Jogos[]>(`${this.url1}?idJogo=${idJogo}&apikey=${this.apiKey}`);
   } 
 
   //searchData(title: string, type: SearchType): Observable<any> {
