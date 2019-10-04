@@ -7,7 +7,7 @@ const routes: Routes = [
     redirectTo: 'tela-login',
     pathMatch: 'full'
   },
-  
+
   {
     path: 'biblioteca',
     loadChildren: () => import('./pages/biblioteca/home.module').then(m => m.HomePageModule)
@@ -35,6 +35,6 @@ const routes: Routes = [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule],
-  
+
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

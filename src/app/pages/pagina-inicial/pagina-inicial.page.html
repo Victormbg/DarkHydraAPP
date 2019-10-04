@@ -6,57 +6,72 @@
     <ion-title *ngIf="!isSearchbarOpened">
       Todos
     </ion-title>
-    <ion-searchbar placeholder="Pesquisa" *ngIf="isSearchbarOpened" showCancelButton="true" (search)="onSearch($event)" (ionCancel)="isSearchbarOpened=false"></ion-searchbar>
+    <ion-searchbar
+      placeholder="Pesquisa"
+      *ngIf="isSearchbarOpened"
+      showCancelButton="true"
+      (search)="onSearch($event)"
+      (ionCancel)="isSearchbarOpened = false"
+    ></ion-searchbar>
     <ion-buttons slot="end">
-        <ion-button icon-only *ngIf="!isSearchbarOpened" (click)="isSearchbarOpened=true">
-          <ion-icon name="md-search" style="color: white"></ion-icon>
-        </ion-button>
+      <ion-button
+        icon-only
+        *ngIf="!isSearchbarOpened"
+        (click)="isSearchbarOpened = true"
+      >
+        <ion-icon name="md-search" style="color: white"></ion-icon>
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    
-  <ion-refresher slot="fixed" 
-  (ionRefresh)="ionRefresh($event)" 
-  (ionPull)="ionPull($event)" 
-  (ionStart)="ionStart($event)">
+  <ion-refresher
+    slot="fixed"
+    (ionRefresh)="ionRefresh($event)"
+    (ionPull)="ionPull($event)"
+    (ionStart)="ionStart($event)"
+  >
     <ion-refresher-content
       pullingIcon="arrow-dropdown"
       pullingText="Puxe para atualizar"
       refreshingSpinner="circles"
-      refreshingText="Atualizando...">
+      refreshingText="Atualizando..."
+    >
     </ion-refresher-content>
   </ion-refresher>
-<ion-list>
-  <ion-item *ngFor="let item of (resultado | async) " [routerLink]="['/pagina-jogo', item.idJogo]">
-    <img src="{{item.imagem1}}" >   
-    <ion-label>{{item.tituloJogo}}</ion-label>
-  </ion-item>
-</ion-list>
+  <ion-list>
+    <ion-item
+      *ngFor="let item of resultado | async"
+      [routerLink]="['/pagina-jogo', item.idJogo]"
+    >
+      <img src="{{ item.imagem1 }}" />
+      <ion-label>{{ item.tituloJogo }}</ion-label>
+    </ion-item>
+  </ion-list>
 
-<ion-item routerLink="/" class="img1">
-    <img src="/assets/img/gta-vice.jpg">
+  <ion-item routerLink="/" class="img1">
+    <img src="/assets/img/gta-vice.jpg" />
     <ion-label>GTA VICE CITY</ion-label>
   </ion-item>
 
   <ion-item routerLink="/" class="img2">
-    <img src="/assets/img/gta.jpg" >
+    <img src="/assets/img/gta.jpg" />
     <ion-label>GTA SAN ANDREAS</ion-label>
   </ion-item>
-    
+
   <ion-item routerLink="/" class="img1">
-    <img src="/assets/img/gta-vice.jpg">
+    <img src="/assets/img/gta-vice.jpg" />
     <ion-label>GTA VICE CITY</ion-label>
   </ion-item>
-  
+
   <ion-item routerLink="/" class="img2">
-    <img src="/assets/img/gta.jpg" >
+    <img src="/assets/img/gta.jpg" />
     <ion-label>GTA SAN ANDREAS</ion-label>
   </ion-item>
-      
+
   <ion-item routerLink="/" class="img1">
-    <img src="/assets/img/gta-vice.jpg">
+    <img src="/assets/img/gta-vice.jpg" />
     <ion-label>GTA VICE CITY</ion-label>
   </ion-item>
 </ion-content>

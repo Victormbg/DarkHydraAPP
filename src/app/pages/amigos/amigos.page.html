@@ -1,58 +1,46 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-          </ion-buttons>
-      <ion-title>Lista de Amigos</ion-title>
-      
-      <ion-searchbar (ionChange)="onSearchTerm($event)" placeholder="Search an item"></ion-searchbar>
-
-
-
-
-    </ion-toolbar>
-  </ion-header>
-
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Lista de Amigos</ion-title>
+    <ion-searchbar (ionChange)="onSearchTerm($event)" placeholder="Search an item"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
-  
   <ion-item routerLink="/pagina-amigos">
     <ion-avatar>
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
     </ion-avatar>
     <ion-label>Amigo 1</ion-label>
   </ion-item>
-  
+
   <ion-item>
     <ion-avatar>
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
     </ion-avatar>
     <ion-label>Amigo 2</ion-label>
   </ion-item>
-  
+
   <ion-item>
     <ion-avatar>
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
     </ion-avatar>
     <ion-label>Amigo 3</ion-label>
   </ion-item>
-      
+
   <ion-item>
     <ion-avatar>
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
     </ion-avatar>
     <ion-label>Amigo 4</ion-label>
   </ion-item>
-    
+
   <ion-item>
     <ion-avatar>
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
     </ion-avatar>
     <ion-label>MULHER 5</ion-label>
   </ion-item>
- 
+
 </ion-content>
-
-
-
-
-    

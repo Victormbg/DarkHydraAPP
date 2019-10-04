@@ -8,13 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AmigosPage implements OnInit {
 
-  search: boolean  = false;
+  search: boolean = false;
 
   constructor() { }
 
-
-  
-  
   ngOnInit() {
   }
 

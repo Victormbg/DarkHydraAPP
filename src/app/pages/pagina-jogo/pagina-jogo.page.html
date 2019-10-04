@@ -1,34 +1,34 @@
 <ion-header>
   <ion-toolbar>
-      <ion-buttons slot="start">
-          <ion-back-button defaultHref="/biblioteca"></ion-back-button>
-        </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/biblioteca"></ion-back-button>
+    </ion-buttons>
     <ion-title>
       {{ jogos.tituloJogo }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <img src="" style="height: 100px; width: 100%;"alt="">
+  <img src="" style="height: 100px; width: 100%;" alt="" />
   <ion-content>
     <ion-slides pager="true">
-        <ion-slide>
-            <img src="{{ jogos?.imagem2 }}" >
-        </ion-slide>
-        <ion-slide>
-            <img src="{{ jogos?.imagem3 }}" >
-        </ion-slide>
-        <ion-slide>
-            <img src="{{ jogos?.imagem4}}" >
-        </ion-slide>
-      </ion-slides>
+      <ion-slide>
+        <img src="{{ jogos?.imagem2 }}" />
+      </ion-slide>
+      <ion-slide>
+        <img src="{{ jogos?.imagem3 }}" />
+      </ion-slide>
+      <ion-slide>
+        <img src="{{ jogos?.imagem4 }}" />
+      </ion-slide>
+    </ion-slides>
     <h2>DESCRICÃO DO JOGO</h2>
     <p>
-      {{ jogos?.descJogo}}
+      {{ jogos?.descJogo }}
     </p>
     <h2>TAGS DO JOGO</h2>
     <p>
-      {{ jogos?.tagsJogo}}
+      {{ jogos?.tagsJogo }}
     </p>
+  </ion-content>
 </ion-content>
-

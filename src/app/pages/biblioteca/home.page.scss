@@ -1,28 +1,28 @@
-ion-card-title{
+ion-card-title {
   text-align: center;
   color: black;
 }
 
-ion-menu-button{
+ion-menu-button {
   color: white;
 }
 
-ion-card-content label{
+ion-card-content label {
   color: white;
   display: block;
   text-align: center;
-  font-size: 20px;  
+  font-size: 20px;
 }
 
-ion-content{
-  --ion-background-color:#101010; 
+ion-content {
+  --ion-background-color: #101010;
 }
 
-ion-toolbar{
-  --ion-background-color:black; 
+ion-toolbar {
+  --ion-background-color: black;
 }
 
-ion-title{
+ion-title {
   color: white;
   font-size: 30px;
 }
@@ -45,43 +45,42 @@ ion-refresher{
 }
 */
 
-$refresher-icon-color:color(white);
-$refresher-text-color:color(white);
-$refresher-text-color:color(--ion-color-light);
+$refresher-icon-color: color(white);
+$refresher-text-color: color(white);
+$refresher-text-color: color(--ion-color-light);
 
-ion-searchbar{
-  --placeholder-color:black;
+ion-searchbar {
+  --placeholder-color: black;
   --icon-color: black;
   --color: black;
   --cancel-button-color: black;
   --background: white;
 }
 
-ion-item img{
+ion-item img {
   width: 150px;
   height: 100px;
 }
 
-ion-item{
-  color:white;
-  margin-bottom:5px;
-  margin-top:2px;
- 
+ion-item {
+  color: white;
+  margin-bottom: 5px;
+  margin-top: 2px;
 }
 
-ion-label{
+ion-label {
   margin-left: 10px;
   color: white;
   font-size: 30px;
 }
-ion-item img{
+ion-item img {
   width: 100px;
   height: 100px;
 }
-.img1{
-  --background:#101010;
+.img1 {
+  --background: #101010;
 }
 
-.img2{
+.img2 {
   --background: #202020;
 }

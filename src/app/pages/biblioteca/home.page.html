@@ -6,35 +6,51 @@
     <ion-title *ngIf="!isSearchbarOpened">
       Biblioteca
     </ion-title>
-    <ion-searchbar placeholder="Pesquisa" *ngIf="isSearchbarOpened" showCancelButton="true" (search)="onSearch($event)" (ionCancel)="isSearchbarOpened=false"></ion-searchbar>
+    <ion-searchbar
+      placeholder="Pesquisa"
+      *ngIf="isSearchbarOpened"
+      showCancelButton="true"
+      (search)="onSearch($event)"
+      (ionCancel)="isSearchbarOpened = false"
+    ></ion-searchbar>
     <ion-buttons slot="end">
-        <ion-button icon-only *ngIf="!isSearchbarOpened" (click)="isSearchbarOpened=true">
-          <ion-icon name="md-search" style="color: white"></ion-icon>
-        </ion-button>
+      <ion-button
+        icon-only
+        *ngIf="!isSearchbarOpened"
+        (click)="isSearchbarOpened = true"
+      >
+        <ion-icon name="md-search" style="color: white"></ion-icon>
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<ion-content> 
-  <ion-refresher slot="fixed"
-    (ionRefresh)="ionRefresh($event)" 
-    (ionPull)="ionPull($event)" 
-    (ionStart)="ionStart($event)">
+<ion-content>
+  <ion-refresher
+    slot="fixed"
+    (ionRefresh)="ionRefresh($event)"
+    (ionPull)="ionPull($event)"
+    (ionStart)="ionStart($event)"
+  >
     <ion-refresher-content
-      class="atualizar"  
+      class="atualizar"
       pullingIcon="arrow-dropdown"
       pullingText="Puxe para atualizar"
       refreshingSpinner="circles"
-      refreshingText="Atualizando...">
+      refreshingText="Atualizando..."
+    >
     </ion-refresher-content>
-  </ion-refresher>    
+  </ion-refresher>
   <!--
     ! AINDA TENDANDO FAZER O ID APARECER 
     [routerLink]="['/pagina-jogo', item.id]"
   -->
   <ion-list>
-    <ion-item *ngFor="let item of (resultado | async) " [routerLink]="['/pagina-jogo', item.imdbID]">
-      <img src="{{item.imagem1}}" >   
-      <ion-label>{{item.tituloJogo}}</ion-label>
+    <ion-item
+      *ngFor="let item of resultado | async"
+      [routerLink]="['/pagina-jogo', item.imdbID]"
+    >
+      <img src="{{ item.imagem1 }}" />
+      <ion-label>{{ item.tituloJogo }}</ion-label>
     </ion-item>
   </ion-list>
 </ion-content>

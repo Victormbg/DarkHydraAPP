@@ -1,36 +1,47 @@
 <ion-header>
   <ion-toolbar>
-      <img src="/assets/img/logo-login.png" alt="">
+    <img src="/assets/img/logo-login.png" alt="" />
   </ion-toolbar>
 </ion-header>
 
 <ion-content id="login">
-<ion-item>
-  <ion-label position="floating" class="label">Usuario</ion-label>
-  <ion-input type="text" 
-             clearInput 
-             placeholder="{{(isUserFocus) ? 'Entre com o usuario' : '' }}"
-             (ionFocus)="isUserFocus=true" 
-             (ionBlur)="isUserFocus=false"
-             [(ngModel)]="usuario"
-  ></ion-input>
-</ion-item>
+  <ion-item>
+    <ion-label position="floating" class="label">Usuario</ion-label>
+    <ion-input
+      type="text"
+      clearInput
+      placeholder="{{ isUserFocus ? 'Entre com o usuario' : '' }}"
+      (ionFocus)="isUserFocus = true"
+      (ionBlur)="isUserFocus = false"
+      [(ngModel)]="usuario"
+    ></ion-input>
+  </ion-item>
 
-<ion-item>
-  <ion-label position="floating" class="label">Senha</ion-label>
-  <ion-input type="password"  
-             autocomplete="current-password"
-             (ionFocus)="isPassFocus=true" 
-             (ionBlur)="isPassFocus=false" 
-             placeholder="{{(isPassFocus) ? 'Entre com a senha' : '' }}" 
-             clearInput
-             [(ngModel)]="senha">
-  </ion-input>
-</ion-item>
+  <ion-item>
+    <ion-label position="floating" class="label">Senha</ion-label>
+    <ion-input
+      type="password"
+      autocomplete="current-password"
+      (ionFocus)="isPassFocus = true"
+      (ionBlur)="isPassFocus = false"
+      placeholder="{{ isPassFocus ? 'Entre com a senha' : '' }}"
+      clearInput
+      [(ngModel)]="senha"
+    >
+    </ion-input>
+  </ion-item>
 
-<ion-button routerLink="#" color="primary" shape="round" >Esqueceu sua senha?</ion-button>
+  <ion-button routerLink="#" color="primary" shape="round"
+    >Esqueceu sua senha?</ion-button
+  >
 
-<div id="botao">
-  <ion-button [disabled]="!senha || !usuario" color="secondary" shape="round" routerLink="/biblioteca">Entrar</ion-button>
-</div>
+  <div id="botao">
+    <ion-button
+      [disabled]="!senha || !usuario"
+      color="secondary"
+      shape="round"
+      routerLink="/biblioteca"
+      >Entrar</ion-button
+    >
+  </div>
 </ion-content>
