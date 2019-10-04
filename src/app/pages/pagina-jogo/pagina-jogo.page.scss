@@ -1,45 +1,40 @@
-  .welcome-card img {
-    max-height: 35vh;
-    overflow: hidden;
-  }
+ion-back-button{
+  --color: white;
+}
 
-  ion-back-button{
-    --color: white;
-  }
+ion-card-title{
+  text-align: center;
+  color: black;
+}
+  
+ion-card-content label{
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 20px;  
+}
+  
+ion-content{
+  --ion-background-color:#101010; 
+}
+  
+ion-toolbar{
+  --ion-background-color:black; 
+}
+  
+ion-title{
+  color: white;
+  font-size: 30px;
+}
 
-  ion-card-title{
-    text-align: center;
-    color: black;
-  }
+h1,h2, p{
+  color: white;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
   
-  ion-card-content label{
-    color: white;
-    display: block;
-    text-align: center;
-    font-size: 20px;  
-  }
-  
-  ion-content{
-    --ion-background-color:#101010; 
-  }
-  
-  ion-toolbar{
-    --ion-background-color:black; 
-  }
-  
-  ion-title{
-    color: white;
-    font-size: 30px;
-  }
-
-  h1,h2, p{
-    color: white;
-    text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  
-  img{
-      height: 200px;
-      width: 370px;
-  }
+img{
+  height: 200px;
+  width: 370px;
+}
