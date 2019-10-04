@@ -16,10 +16,10 @@ export class DestaquePage implements OnInit {
       event.target.complete();
     }, 1000);
   }
-  ionPull(event){
+  ionPull(event) {
     console.log('ionPull Event Triggered!');
   }
-  ionStart(event){
+  ionStart(event) {
     console.log('ionStart Event Triggered!');
   }
 

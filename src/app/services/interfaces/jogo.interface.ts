@@ -1,4 +1,4 @@
-export interface Jogos{
+export interface Jogos {
     idJogo?: string
     tituloJogo?: string
     descJogo?: string

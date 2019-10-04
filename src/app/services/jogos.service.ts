@@ -22,36 +22,33 @@ export class JogosService {
   url = 'https://sleepy-river-60466.herokuapp.com/jogos?apikey=scadifcabif'
   url1 = 'https://sleepy-river-60466.herokuapp.com/jogos'
   apiKey = 'scadifcabif';
-  constructor(public http: HttpClient) { 
-    console.log ("Service Ativado")
+  constructor(public http: HttpClient) {
+    console.log("Service Ativado")
   }
-  listar():Observable<Jogos[]>{
+  listar(): Observable<Jogos[]> {
     return this.http.get<Jogos[]>(this.url);
   }
 
-  getJogoId(idJogo){
+  getJogoId(idJogo) {
     return this.http.get<Jogos[]>(`${this.url1}?idJogo=${idJogo}&apikey=${this.apiKey}`);
     //return this.http.get<Jogos[]>(`${this.url1}?idJogo=${idJogo}&apikey=${this.apiKey}`);
-  } 
+  }
 
   //searchData(title: string, type: SearchType): Observable<any> {
-   // return this.http.get(`${this.url}?s=${encodeURI(title)}&type=${type}&apikey=${this.apiKey}`).pipe(
-    //  map(results => results['Search'])
-   // );
+  // return this.http.get(`${this.url}?s=${encodeURI(title)}&type=${type}&apikey=${this.apiKey}`).pipe(
+  //  map(results => results['Search'])
+  // );
   //}
 
   /*
   
+  ! IMPLEMENTANDO O GETID POREM AINDA APRESENTA ERROS
   https://sleepy-river-60466.herokuapp.com/jogos?i=1&apikey=scadifcabif&plot=full
-
 
   getJogoId(idJogo) {
     return this.http.get<Jogos[]>(`${this.url}?i=${idJogo}&plot=full`);
   }
-  
-  
-  
-  
+ 
   
   id = null;
   produtos: {};
