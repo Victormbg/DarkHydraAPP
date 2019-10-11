@@ -10,17 +10,24 @@
 </ion-header>
 <ion-content>
   <ion-avatar>
-    <img
-      src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
-    />
+    <img src="../../../assets/img/avatar.jpg" />
   </ion-avatar>
-
-  <ion-label style="text-align: center">Nome</ion-label><br />
-
-  <label class="des" style="text-align: center">DESCRICAO:</label>
-
+  <div class="ion-text-center">
+    <ion-label class="nome">Nome de Usuario</ion-label>
+    <br/><br/>
+    <ion-label class="des">DESCRICAO:</ion-label>
+  </div>  
   <p>
-    Porque as pessoas loucas o bastante para acreditar que podem mudar o mundo,
-    são as que o mudam.
+    Porque as pessoas loucas o bastante para acreditar que podem mudar o mundo, são as que o mudam.
   </p>
+  <ion-card>
+    <ion-card-header >
+      <ion-card-title>Minha Biblioteca</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-avatar class="jogoI">
+        <img *ngFor="let item of resultado | async" src="{{ item.imagem1 }}" />
+      </ion-avatar>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

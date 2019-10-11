@@ -32,13 +32,28 @@ ion-icon {
 }
 
 ion-avatar {
-  margin-left: 130px;
+  margin:auto;
   width: 150px;
   height: 150px;
 }
 
 label {
+  //text-align: center;
+  //padding-left: 10px;
+  //padding-right: 10px;
   font-size: 25px;
+  color: white;
+  display: flex; 
+  margin: auto; 
+}
+
+.ion-text-center{
+  text-align: center;
+}
+
+.nome {
+  text-align: center;
+  font-size: 30px;
   color: white;
 }
 
@@ -53,4 +68,16 @@ p {
   color: white;
   padding-left: 10px;
   padding-right: 10px;
+}
+.jogoI{
+  //float: left;
+  width: 70px;
+  height: 70px;
+}
+ion-card{
+  --background: white;
+}
+
+ion-card-title{
+  text-align: center;
 }

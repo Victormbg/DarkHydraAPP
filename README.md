@@ -26,5 +26,12 @@ $ git add . <br>
 $ git commit -am "make it better"<br>
 $ git push heroku master<br>
 
+# DEPLOY NO GITHUB
+git add *<br>
+git commit -m "comentario"<br>
+git remote add origin <servidor><br>
+git push origin master<br>
+
 # LINK API
-https://sleepy-river-60466.herokuapp.com/jogos?apikey=scadifcabif
+https://sleepy-river-60466.herokuapp.com/jogos?apikey=scadifcabif<br>
+https://rogerdudler.github.io/git-guide/index.pt_BR.html
