@@ -27,7 +27,7 @@
         <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
         <allow-intent href="market:*" />
         <icon src="resources/android/icon/hydra.png" />
-        <splash src="resources/android/splash/hydra.jpg" />
+        <splash src="resources/android/splash/SPlash3.jpg" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />

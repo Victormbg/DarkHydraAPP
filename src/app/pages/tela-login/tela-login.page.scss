@@ -77,8 +77,12 @@ ion-card-title {
 
 #botao {
   margin-top: 60px;
-  margin-left: 75px;
   width: 170px;
+}
+
+#botao2 {
+  margin-top: 30px;
+  width: 250px;
 }
 
 ion-content {
@@ -101,9 +105,4 @@ ion-input {
 .label {
   font-size: 30px;
   color: white;
-}
-
-ion-button {
-  margin-top: 60px;
-  margin-left: 65px;
 }

@@ -31,7 +31,7 @@ export class TelaLoginPage implements OnInit {
   ngOnInit() {
   }
 
-  
+
   ionViewWillEnter() {
     this.menuCtrl.enable(false);
   }
