@@ -10,7 +10,7 @@ import { environment } from '../../../environments/environment';
   styleUrls: ['tela-login.page.scss'],
 })
 export class HomePage {
-  user: string;senha: string;res: string;
+  senha: string;res: string;
 
   constructor(public alertCrtl : AlertController,
     public navCtrl: NavController,

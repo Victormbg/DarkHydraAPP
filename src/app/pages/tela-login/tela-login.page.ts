@@ -12,7 +12,7 @@ import { environment } from '../../../environments/environment';
   styleUrls: ['./tela-login.page.scss'],
 })
 export class TelaLoginPage implements OnInit {
-
+  isUserFocus;isPassFocus;usuario;
   FB_APP_ID: number = 2392489640796829;
   user: string; senha: string; res: string;
 

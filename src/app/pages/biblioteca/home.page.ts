@@ -13,6 +13,9 @@ import { MenuController } from '@ionic/angular';
 export class HomePage implements OnInit {
   resultado: Observable<any>;
 
+
+
+
   public isSearchbarOpened = false;
   constructor(public navCtrl: NavController, public http: HttpClient, public jogo: JogosService, public menuCtrl: MenuController) {
   }
@@ -43,4 +46,14 @@ export class HomePage implements OnInit {
   ionViewWillEnter() {
     this.menuCtrl.enable(true);
   }
+
+
+
+  // ! TESTE
+
+  buscarJogos( event ){
+    const texto = event.target.value;
+    console.log(texto);
+  }
+
 }
