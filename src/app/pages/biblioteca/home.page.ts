@@ -58,7 +58,7 @@ export class HomePage implements OnInit {
 
   // FIM DA FUNÇÃO PARA INICIALIZAR O SIDEMENU
 
-  // ! TESTE
+  // FUNÇÂO PARA FAZER A BUSCA NA BARRA DE PESQUISA
 
   buscarJogos( event ) {
     const texto = event.target.value;

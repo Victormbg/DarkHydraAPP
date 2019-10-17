@@ -4,7 +4,7 @@
       <ion-back-button defaultHref="/biblioteca"></ion-back-button>
     </ion-buttons>
     <ion-title>
-      {{ jogos?.tituloJogo }}
+      {{ information?.tituloJogo }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,22 +13,22 @@
   <ion-content>
     <ion-slides pager="true">
       <ion-slide>
-        <img src="{{ jogos?.imagem2 }}" />
+        <img src="{{ information?.imagem2 }}" />
       </ion-slide>
       <ion-slide>
-        <img src="{{ jogos?.imagem3 }}" />
+        <img src="{{ information?.imagem3 }}" />
       </ion-slide>
       <ion-slide>
-        <img src="{{ jogos?.imagem4 }}" />
+        <img src="{{ information?.imagem4 }}" />
       </ion-slide>
     </ion-slides>
     <h2>DESCRICÃO DO JOGO</h2>
     <p>
-      {{ jogos?.descJogo }}
+      {{ information?.descJogo }}
     </p>
     <h2>TAGS DO JOGO</h2>
     <p>
-      {{ jogos?.tagsJogo }}
+      {{ information?.tagsJogo }}
     </p>
   </ion-content>
 </ion-content>

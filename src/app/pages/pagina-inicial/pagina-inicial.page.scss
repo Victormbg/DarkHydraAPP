@@ -26,6 +26,14 @@ ion-toolbar {
   --ion-background-color: black;
 }
 
+ion-searchbar {
+  --placeholder-color: black;
+  --icon-color: black;
+  --color: black;
+  --cancel-button-color: black;
+  --background: white;
+}
+
 ion-title {
   color: white;
   font-size: 30px;

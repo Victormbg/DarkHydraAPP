@@ -7,11 +7,12 @@
       Biblioteca
     </ion-title>
     <ion-searchbar
-    placeholder="Pesquisar"
-    (ionChange)="buscarJogos($event)"
-    *ngIf="isSearchbarOpened"	      
-    showCancelButton="true"	
-    (ionCancel)="isSearchbarOpened = false">
+      placeholder="Pesquisar"
+      (ionChange)="buscarJogos($event)"
+      *ngIf="isSearchbarOpened"
+      showCancelButton="true"
+      (ionCancel)="isSearchbarOpened = false"
+    >
     </ion-searchbar>
     <ion-buttons slot="end">
       <ion-button
@@ -54,13 +55,9 @@
     </ion-item>
   -->
   <ion-list *ngIf="jogos.length > 0">
-
-
-    <ion-item
-    *ngFor="let jogo of jogos | filtro:textoBuscar"
-  >
-    <img src="{{ jogo.imagem1 }}" />
-    <ion-label>{{ jogo.tituloJogo }}</ion-label>
-  </ion-item>
+    <ion-item *ngFor="let jogo of jogos | filtro: textoBuscar">
+      <img src="{{ jogo.imagem1 }}" />
+      <ion-label>{{ jogo.tituloJogo }}</ion-label>
+    </ion-item>
   </ion-list>
 </ion-content>

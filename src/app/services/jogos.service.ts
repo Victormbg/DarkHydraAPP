@@ -1,55 +1,40 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { Jogos } from '../services/interfaces/jogo.interface'
-import { Jogo } from '../models/jogos.model';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { map } from "rxjs/operators";
+import { Jogos } from "../services/interfaces/jogo.interface";
+import { Jogo } from "../models/jogos.model";
 
-export enum SearchType {
-  all = '',
-  idJogo = 'idJogo',
-  tituloJogo = 'tituloJogo',
-  descJogo = 'descJogo',
-  tagsJogo = 'tagsJogo',
-  imagem1 = 'imagem1',
-  imagem2 = 'imagem2',
-  imagem3 = 'imagem3',
-  imagem4 = 'imagem4',
-}
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class JogosService {
-  url = 'https://sleepy-river-60466.herokuapp.com/jogos?apikey=scadifcabif'
-  url1 = 'https://sleepy-river-60466.herokuapp.com/jogos'
-  apiKey = 'scadifcabif';
+  url = "https://sleepy-river-60466.herokuapp.com/jogos?apikey=scadifcabif";
+  url1 = "https://sleepy-river-60466.herokuapp.com/jogos";
+  apiKey = "scadifcabif";
   constructor(public http: HttpClient) {
-    console.log("Service Ativado")
+    console.log("Service Ativado");
   }
 
-  getJogos(){
-    return this.http.get<Jogo[]>('https://sleepy-river-60466.herokuapp.com/jogos?apikey=scadifcabif')
+  getJogos() {
+    return this.http.get<Jogo[]>(
+      "https://sleepy-river-60466.herokuapp.com/jogos?apikey=scadifcabif"
+    );
   }
 
   listar(): Observable<Jogos[]> {
     return this.http.get<Jogos[]>(this.url);
   }
 
-
-
-  // TESTE PARA PEGAR O ID DO JOGO E 
+  // TESTE PARA PEGAR O ID DO JOGO E
   // ABRIR A PAGINA DO JOGO AINDA EM DESENVOLVIMENTO
 
   getJogoId(idJogo) {
-    return this.http.get<Jogos[]>(`${this.url1}?idJogo=${idJogo}&apikey=${this.apiKey}`);
+    return this.http.get<Jogo[]>(
+      `${this.url1}?idJogo=${idJogo}&apikey=${this.apiKey}`
+    );
     //return this.http.get<Jogos[]>(`${this.url1}?idJogo=${idJogo}&apikey=${this.apiKey}`);
   }
-
-  //searchData(title: string, type: SearchType): Observable<any> {
-  // return this.http.get(`${this.url}?s=${encodeURI(title)}&type=${type}&apikey=${this.apiKey}`).pipe(
-  //  map(results => results['Search'])
-  // );
-  //}
 
   /*
   

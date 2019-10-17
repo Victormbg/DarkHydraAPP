@@ -4,15 +4,17 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title *ngIf="!isSearchbarOpened">
-      Todos
+      Todos os Jogos
     </ion-title>
     <ion-searchbar
       placeholder="Pesquisa"
+      (ionChange)="buscarJogos($event)"
       *ngIf="isSearchbarOpened"
       showCancelButton="true"
-      (search)="onSearch($event)"
       (ionCancel)="isSearchbarOpened = false"
-    ></ion-searchbar>
+    >
+      ></ion-searchbar
+    >
     <ion-buttons slot="end">
       <ion-button
         icon-only
@@ -24,7 +26,6 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
   <ion-refresher
     slot="fixed"
@@ -42,36 +43,11 @@
   </ion-refresher>
   <ion-list>
     <ion-item
-      *ngFor="let item of resultado | async"
-      [routerLink]="['/pagina-jogo', item.idJogo]"
+      *ngFor="let jogo of jogos | filtro: textoBuscar"
+      [routerLink]="['/pagina-jogo', jogo.idJogo]"
     >
-      <img src="{{ item.imagem1 }}" />
-      <ion-label>{{ item.tituloJogo }}</ion-label>
+      <img src="{{ jogo.imagem1 }}" />
+      <ion-label>{{ jogo.tituloJogo }}</ion-label>
     </ion-item>
   </ion-list>
-
-  <ion-item routerLink="/" class="img1">
-    <img src="/assets/img/gta-vice.jpg" />
-    <ion-label>GTA VICE CITY</ion-label>
-  </ion-item>
-
-  <ion-item routerLink="/" class="img2">
-    <img src="/assets/img/gta.jpg" />
-    <ion-label>GTA SAN ANDREAS</ion-label>
-  </ion-item>
-
-  <ion-item routerLink="/" class="img1">
-    <img src="/assets/img/gta-vice.jpg" />
-    <ion-label>GTA VICE CITY</ion-label>
-  </ion-item>
-
-  <ion-item routerLink="/" class="img2">
-    <img src="/assets/img/gta.jpg" />
-    <ion-label>GTA SAN ANDREAS</ion-label>
-  </ion-item>
-
-  <ion-item routerLink="/" class="img1">
-    <img src="/assets/img/gta-vice.jpg" />
-    <ion-label>GTA VICE CITY</ion-label>
-  </ion-item>
 </ion-content>
