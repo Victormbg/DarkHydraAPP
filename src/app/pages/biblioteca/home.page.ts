@@ -60,7 +60,7 @@ export class HomePage implements OnInit {
 
   // ! TESTE
 
-  buscarUsuario( event ) {
+  buscarJogos( event ) {
     const texto = event.target.value;
     this.textoBuscar = texto;
   }

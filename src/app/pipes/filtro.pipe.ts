@@ -9,12 +9,12 @@ export class FiltroPipe implements PipeTransform {
   transform( jogos: Jogo[],texto: string): Jogo[] {
     if( texto.length === 0 ) { return jogos; }
       
-      texto = texto.toLocaleLowerCase();
-      
-      return jogos.filter( Jogo => {
-        return Jogo.name.toLocaleLowerCase().includes(texto)
-        || Jogo.tituloJogo.toLocaleLowerCase().includes(texto);
-      });
+    texto = texto.toLocaleLowerCase();
+
+    return jogos.filter( Jogo => {
+      return Jogo.tituloJogo.toLocaleLowerCase().includes(texto)
+             || Jogo.tituloJogo.toLocaleLowerCase().includes(texto);
+    });
   }
 }
 

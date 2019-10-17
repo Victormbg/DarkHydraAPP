@@ -1,5 +1,5 @@
 export interface Jogo {
-  name: any;
+    name: string;
     idJogo:     number;
     tituloJogo: string;
     descJogo:   string;

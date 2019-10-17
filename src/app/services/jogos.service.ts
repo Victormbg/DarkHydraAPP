@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Jogos } from '../services/interfaces/jogo.interface'
+import { Jogo } from '../models/jogos.model';
 
 export enum SearchType {
   all = '',
@@ -27,7 +28,7 @@ export class JogosService {
   }
 
   getJogos(){
-    return this.http.get<Jogos[]>('https://sleepy-river-60466.herokuapp.com/jogos?apikey=scadifcabif')
+    return this.http.get<Jogo[]>('https://sleepy-river-60466.herokuapp.com/jogos?apikey=scadifcabif')
   }
 
   listar(): Observable<Jogos[]> {
