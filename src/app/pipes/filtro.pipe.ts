@@ -13,7 +13,7 @@ export class FiltroPipe implements PipeTransform {
       
       return jogos.filter( Jogo => {
         return Jogo.name.toLocaleLowerCase().includes(texto)
-        || jogo.tituloJogo.toLocaleLowerCase().includes(texto);
+        || Jogo.tituloJogo.toLocaleLowerCase().includes(texto);
       });
   }
 }
