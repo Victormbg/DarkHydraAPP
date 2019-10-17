@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { JogosService } from '../../services/jogos.service';
 import { MenuController } from '@ionic/angular';
+import { Jogo } from '../../models/jogos.model';
 
 @Component({
   selector: 'app-home',
@@ -12,14 +13,16 @@ import { MenuController } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
   resultado: Observable<any>;
-
-
-
+  jogos: Jogo[] = [];
+  textoBuscar = '';
 
   public isSearchbarOpened = false;
-  constructor(public navCtrl: NavController, public http: HttpClient, public jogo: JogosService, public menuCtrl: MenuController) {
+  constructor(public navCtrl: NavController, public http: HttpClient, public jogoServ: JogosService, public menuCtrl: MenuController) {
+    this.jogoServ.getJogos()
+    .subscribe(resp => this.jogos = resp );
   }
 
+  // CODIGO PARA FUNCIONAR O ATUALIZAR //////////////////////////////////
   ionRefresh(event) {
     console.log('Pull Event Triggered!');
     setTimeout(() => {
@@ -27,33 +30,39 @@ export class HomePage implements OnInit {
       event.target.complete();
     }, 1000);
   }
+
   ionPull(event) {
     console.log('ionPull Event Triggered!');
   }
+  
   ionStart(event) {
     console.log('ionStart Event Triggered!');
   }
+
+  // FIM DO CODIGO PARA ATUALIZAR ///////////////////////////////////////////
 
   ngOnInit() {
     this.listaJogos();
   }
 
   listaJogos() {
-    this.resultado = this.jogo.listar();
+    this.resultado = this.jogoServ.listar();
     console.log(this.resultado);
   }
 
+  // APARECER O SIDEMENU POR BUG POIS AO SER REMOVIDO NO 
+  // LOGIN E PRECISO CHAMAR ELE AQUI 
   ionViewWillEnter() {
     this.menuCtrl.enable(true);
   }
 
-
+  // FIM DA FUNÇÃO PARA INICIALIZAR O SIDEMENU
 
   // ! TESTE
 
-  buscarJogos( event ){
+  buscarUsuario( event ) {
     const texto = event.target.value;
-    console.log(texto);
+    this.textoBuscar = texto;
   }
 
 }

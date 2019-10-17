@@ -41,7 +41,7 @@
     ! AINDA TENDANDO FAZER O ID APARECER 
     [routerLink]="['/pagina-jogo', item.id]"
   -->
-  <ion-list>
+  <ion-list *ngIf="usuarios.length > 0">
     <ion-item
       *ngFor="let item of resultado | async"
       [routerLink]="['/pagina-jogo', item.imdbID]"
@@ -49,5 +49,15 @@
       <img src="{{ item.imagem1 }}" />
       <ion-label>{{ item.tituloJogo }}</ion-label>
     </ion-item>
+
+  
+
+    <ion-item
+    *ngFor="let jogo of jogos | filtro:textoBuscar"
+    [routerLink]="['/pagina-jogo', item.imdbID]"
+  >
+    <img src="{{ jogo.imagem1 }}" />
+    <ion-label>TESTE{{ jogo.tituloJogo }}</ion-label>
+  </ion-item>
   </ion-list>
 </ion-content>

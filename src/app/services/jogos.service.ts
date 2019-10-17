@@ -25,9 +25,19 @@ export class JogosService {
   constructor(public http: HttpClient) {
     console.log("Service Ativado")
   }
+
+  getJogos(){
+    return this.http.get<Jogos[]>('https://sleepy-river-60466.herokuapp.com/jogos?apikey=scadifcabif')
+  }
+
   listar(): Observable<Jogos[]> {
     return this.http.get<Jogos[]>(this.url);
   }
+
+
+
+  // TESTE PARA PEGAR O ID DO JOGO E 
+  // ABRIR A PAGINA DO JOGO AINDA EM DESENVOLVIMENTO
 
   getJogoId(idJogo) {
     return this.http.get<Jogos[]>(`${this.url1}?idJogo=${idJogo}&apikey=${this.apiKey}`);

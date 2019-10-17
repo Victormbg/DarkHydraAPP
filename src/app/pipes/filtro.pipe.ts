@@ -1,13 +1,22 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Jogos } from './../services/interfaces/jogo.interface';
+import { Jogo } from '../models/jogos.model';
 
 @Pipe({
   name: 'filtro'
 })
 export class FiltroPipe implements PipeTransform {
 
-  transform( Jogos: any, ..._args: any[]): any {
-    return null;
+  transform( jogos: Jogo[],texto: string): Jogo[] {
+    if( texto.length === 0 ) { return jogos; }
+      
+      texto = texto.toLocaleLowerCase();
+      
+      return jogos.filter( Jogo => {
+        return Jogo.name.toLocaleLowerCase().includes(texto)
+        || jogo.tituloJogo.toLocaleLowerCase().includes(texto);
+      });
   }
-
 }
+
+
+ 
