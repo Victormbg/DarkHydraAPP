@@ -35,3 +35,14 @@ git push origin master<br>
 # LINK API
 https://sleepy-river-60466.herokuapp.com/jogos?apikey=scadifcabif<br>
 https://rogerdudler.github.io/git-guide/index.pt_BR.html
+
+# LINKS DE JOGOS PARA DESTAQUE
+https://teamsalvato.itch.io/ddlc<br>
+https://captaingames.itch.io/enviro-bear-2000
+
+# LINKS PARA JOGOS
+https://ffx.itch.io/ffx-runner-hd<br>
+
+
+# LINK PARA CONTINUAR BAIXANDO
+https://itch.io/games/downloadable/free<br>

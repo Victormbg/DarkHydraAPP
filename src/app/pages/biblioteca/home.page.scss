@@ -41,7 +41,7 @@ ion-refresher{
 }
 
 .ionic-refresher-content {
-  color: white;  
+  color: white;
 }
 */
 
@@ -52,14 +52,9 @@ $refresher-text-color: color(--ion-color-light);
 ion-searchbar {
   --placeholder-color: black;
   --icon-color: black;
-  --color: black;
-  --cancel-button-color: black;
+  --color:4black;
+  --cancel-1utton-color: black;
   --background: white;
-}
-
-ion-item img {
-  width: 150px;
-  height: 100px;
 }
 
 ion-item {
@@ -75,12 +70,5 @@ ion-label {
 }
 ion-item img {
   width: 100px;
-  height: 100px;
-}
-.img1 {
-  --background: #101010;
-}
-
-.img2 {
-  --background: #202020;
+  height: 150px;
 }
