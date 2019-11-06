@@ -40,7 +40,8 @@ export class PaginaJogoPage implements OnInit {
     this.jogoSer.getJogos2(this.idJogo).subscribe(res => {
       this.jogos = res;
       console.log(this.jogos);
-    });
+     });
+
 
 
 
