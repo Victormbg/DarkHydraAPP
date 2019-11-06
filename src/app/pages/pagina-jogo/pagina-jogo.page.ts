@@ -12,7 +12,15 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./pagina-jogo.page.scss"]
 })
 export class PaginaJogoPage implements OnInit {
-  information = null;
+  jogos = null;
+  idJogo  = null;
+  tituloJogo: string;
+  descJogo:   string;
+  tagsJogo:   string;
+  imagem1:    string;
+  imagem2:    string;
+  imagem3:    string;
+  imagem4:    string;
   // FUNÇÃO DO SLIDE
   @ViewChild(IonSlides, { static: true }) slides: IonSlides;
   goToSlide() {
@@ -27,6 +35,18 @@ export class PaginaJogoPage implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.idJogo = this.route.snapshot.params['idJogo'];
+
+    this.jogoSer.getJogos2(this.idJogo).subscribe(res => {
+      this.jogos = res;
+      console.log(this.jogos);
+    });
+
+
+
+
+
+    /*
     // Get the ID that was passed with the URL
     let idJogo = this.route.snapshot.paramMap.get("idJogo");
 
@@ -36,14 +56,16 @@ export class PaginaJogoPage implements OnInit {
       console.log("TESTE:", result);
     });
   }
+  */
   /*
   ! IMPLEMENTANDO PARA MOSTRA O JOGO POREM AINDA APRESENTA ERROS
   this.id = this.route.snapshot.params['idJogo'];
-  
+
   this.jogoSer.getJogoId(this.id).subscribe(res => {
     this.jogos = res;
-    console.log(this.jogos);  
+    console.log(this.jogos);
   });
 
 */
+}
 }

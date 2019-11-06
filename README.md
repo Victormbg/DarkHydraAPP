@@ -32,9 +32,13 @@ git commit -m "comentario"<br>
 git remote add origin <servidor><br>
 git push origin master<br>
 
-# LINK API
+# LINK API - ANTIGOS
 https://sleepy-river-60466.herokuapp.com/jogos?apikey=scadifcabif<br>
 https://rogerdudler.github.io/git-guide/index.pt_BR.html
+
+# LINK API - NOVOS
+https://sleepy-river-60466.herokuapp.com/jogos/t
+https://sleepy-river-60466.herokuapp.com/jogos/p?id=1
 
 # LINKS DE JOGOS PARA DESTAQUE
 https://teamsalvato.itch.io/ddlc<br>
