@@ -19,9 +19,9 @@ export class AuthService {
     private env: EnvService,
   ) { }
 
-  login(email: String, password: String) {
+  login(usuario: String, senha: String) {
     return this.http.post(this.env.API_URL + 'auth/login',
-      {email: email, password: password}
+      {email: usuario, password: senha}
     ).pipe(
       tap(token => {
         this.storage.setItem('token', token)
@@ -36,12 +36,6 @@ export class AuthService {
         return token;
       }),
     );
-  }
-
-  register(fName: String, lName: String, email: String, password: String) {
-    return this.http.post(this.env.API_URL + 'auth/register',
-      {fName: fName, lName: lName, email: email, password: password}
-    )
   }
 
   logout() {
