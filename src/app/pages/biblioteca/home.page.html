@@ -42,18 +42,6 @@
     </ion-refresher-content>
   </ion-refresher>
   <!--
-    ! AINDA TENDANDO FAZER O ID APARECER 
-    [routerLink]="['/pagina-jogo', item.id]"
-
-    ! ANTIGO item listagem de jogos
-        <ion-item
-      *ngFor="let item of resultado | async "
-      [routerLink]="['/pagina-jogo', item.imdbID]"
-    >
-      <img src="{{ item.imagem1 }}" />
-      <ion-label>{{ item.tituloJogo }}</ion-label>
-    </ion-item>
-  -->
   <ion-list *ngIf="jogos.length > 0">
     <ion-item *ngFor="let jogo of jogos | filtro: textoBuscar">
       <img src="{{ jogo.imagem1 }}" />
@@ -61,3 +49,4 @@
     </ion-item>
   </ion-list>
 </ion-content>
+-->

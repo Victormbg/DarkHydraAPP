@@ -5,6 +5,7 @@ import { NavController } from "@ionic/angular";
 import { HttpClient } from "@angular/common/http";
 import { JogosService } from "../../services/jogos.service";
 import { ActivatedRoute } from "@angular/router";
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: "app-pagina-jogo",
@@ -37,13 +38,47 @@ export class PaginaJogoPage implements OnInit {
   ngOnInit() {
     this.idJogo = this.route.snapshot.params['idJogo'];
 
-    this.jogoSer.getJogos2(this.idJogo).subscribe(res => {
+    this.jogoSer.getJogoID(this.idJogo).subscribe(res => {
       this.jogos = res;
       console.log(this.jogos);
-     });
+    });
+
+    /*
+    this.jogoSer.getJogos2(this.idJogo).pipe(map(jogos => {})).subscribe(result => {
+      console.log(result);
+    });
+*/
+/*
+    this.jogoSer.getJogos2(this.idJogo).pipe(map(res => res.json())).subscribe(jogo => {
+            console.log(jogo);
+    });
 
 
 
+    this.jogoSer.getJogos2(this.idJogo).pipe(map(res => res.json()).subscribe(data => {
+        json = data;
+    }));
+
+    var json;
+    var info = []
+    for (var i of json.data) {
+    info.push(i.quantity_produced);
+    }
+  */
+    /*
+    var aula;
+    this.http.get('https://sleepy-river-60466.herokuapp.com/jogos/t').map(res => res.json()).subscribe(data => {
+        aula = data;
+        console.log(aula);
+    });
+
+    this.jogoSer.getJogos2(this.idJogo).pipe(
+        map(res => res.json()).subscribe(data => {
+            aula = data;
+            console.log(aula);
+        })
+    );
+*/
 
 
 

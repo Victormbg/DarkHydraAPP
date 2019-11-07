@@ -27,7 +27,8 @@ const routes: Routes = [
   { path: 'pagina-jogo/:idJogo', loadChildren: './pages/pagina-jogo/pagina-jogo.module#PaginaJogoPageModule' },
   { path: 'perfil', loadChildren: './pages/perfil/perfil.module#PerfilPageModule' },
   { path: 'amigos', loadChildren: './pages/amigos/amigos.module#AmigosPageModule' },
-  { path: 'pagina-amigos', loadChildren: './pages/pagina-amigos/pagina-amigos.module#PaginaAmigosPageModule' }
+  { path: 'pagina-amigos', loadChildren: './pages/pagina-amigos/pagina-amigos.module#PaginaAmigosPageModule' },
+  { path: 'login', loadChildren: './pages/auth/login/login.module#LoginPageModule' }
 ];
 
 @NgModule({

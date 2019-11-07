@@ -50,3 +50,8 @@ https://ffx.itch.io/ffx-runner-hd<br>
 
 # LINK PARA CONTINUAR BAIXANDO
 https://itch.io/games/downloadable/free<br>
+
+# LOGIN
+https://sleepy-river-60466.herokuapp.com/user/l?login=teste1&senha=123
+https://sleepy-river-60466.herokuapp.com/user/l
+https://blog.flicher.net/ionic-4-user-registration-login-tutorial/
