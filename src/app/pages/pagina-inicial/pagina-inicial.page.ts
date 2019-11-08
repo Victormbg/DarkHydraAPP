@@ -16,19 +16,16 @@ export class PaginaInicialPage implements OnInit {
   jogos: Jogo[] = [];
   textoBuscar = '';
   public isSearchbarOpened = false;
-  
-  constructor(public navCtrl: NavController, public http: HttpClient, public jogoServ: JogosService, public menuCtrl: MenuController) { 
+
+  constructor(public navCtrl: NavController, public http: HttpClient, public jogoServ: JogosService, public menuCtrl: MenuController) {
     this.jogoServ.getJogos()
     .subscribe(resp => this.jogos = resp );
   }
 
-  ngOnInit() {
-    this.listaJogos();
-  }
+  ngOnInit() {}
 
-  listaJogos() {
-    this.resultado = this.jogoServ.listar();
-    console.log(this.resultado);
+  ionViewWillEnter() {
+    this.menuCtrl.enable(true);
   }
 
   ionRefresh(event) {

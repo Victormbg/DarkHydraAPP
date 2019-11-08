@@ -34,24 +34,17 @@ export class HomePage implements OnInit {
   ionPull(event) {
     console.log('ionPull Event Triggered!');
   }
-  
+
   ionStart(event) {
     console.log('ionStart Event Triggered!');
   }
 
   // FIM DO CODIGO PARA ATUALIZAR ///////////////////////////////////////////
 
-  ngOnInit() {
-    this.listaJogos();
-  }
+  ngOnInit() { }
 
-  listaJogos() {
-    this.resultado = this.jogoServ.listar();
-    console.log(this.resultado);
-  }
-
-  // APARECER O SIDEMENU POR BUG POIS AO SER REMOVIDO NO 
-  // LOGIN E PRECISO CHAMAR ELE AQUI 
+  // APARECER O SIDEMENU POR BUG POIS AO SER REMOVIDO NO
+  // LOGIN E PRECISO CHAMAR ELE AQUI
   ionViewWillEnter() {
     this.menuCtrl.enable(true);
   }

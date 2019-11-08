@@ -1,8 +1,8 @@
+import { AuthService } from './../../../services/auth/auth.service';
+import { AlertService } from './../../../services/alert/alert.service';
 import { Component, OnInit } from '@angular/core';
 import { ModalController, NavController } from '@ionic/angular';
 import { NgForm } from '@angular/forms';
-import { AuthService } from 'src/app/services/auth.service';
-import { AlertService } from 'src/app/services/alert.service';
 
 @Component({
   selector: 'app-login',

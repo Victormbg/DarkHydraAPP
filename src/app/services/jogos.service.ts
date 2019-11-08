@@ -2,8 +2,8 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
-import { Jogos } from "../services/interfaces/jogo.interface";
-import { Jogo } from "../models/jogos.model";
+//import { Jogos } from "../services/interfaces/jogo.interface";
+//import { Jogo } from "../models/jogos.model";
 
 export interface Jogo {
     name: string;
@@ -38,8 +38,10 @@ export class JogosService {
   getJogoID(idJogo) {
     return this.http.get<Jogo>("https://sleepy-river-60466.herokuapp.com/jogos/p?id="+idJogo);
   }
-
+ /*
   listar(): Observable<Jogos[]> {
     return this.http.get<Jogos[]>(this.url);
   }
+  */
+
 }
