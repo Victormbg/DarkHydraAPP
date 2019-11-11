@@ -19,9 +19,10 @@
 	<ion-list>
 		<ion-item *ngFor="let jogo of jogos" [routerLink]="['/pagina-jogo', jogo.idJogo]">
 			<img src="{{ jogo.imagem1 }}" />
-			<ion-label>{{ jogo.tituloJogo }}</ion-label><br>
-            <ion-label>Dowload:{{ jogo.downloads }}</ion-label>
-		</ion-item>
-	</ion-list>
-
+			<ion-label>
+                <p>{{ jogo.tituloJogo }}</p>
+                <p>Downloads {{ jogo.downloads }}</p>
+            </ion-label>
+        </ion-item>
+    </ion-list>
 </ion-content>
