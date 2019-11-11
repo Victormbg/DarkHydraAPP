@@ -42,12 +42,15 @@
     </ion-refresher-content>
   </ion-refresher>
   <ion-list>
-    <ion-item
+    <ion-item text-wrap
       *ngFor="let jogo of jogos | filtro: textoBuscar"
       [routerLink]="['/pagina-jogo', jogo.idJogo]"
     >
       <img src="{{ jogo.imagem1 }}" />
-      <ion-label>{{ jogo.tituloJogo }}</ion-label>
+      <ion-label text-wrap>
+      <p>{{ jogo.tituloJogo }}</p>
+      <p>Tags {{ jogo.tagsJogo }}</p>
+      </ion-label>
     </ion-item>
   </ion-list>
 </ion-content>
