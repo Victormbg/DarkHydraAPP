@@ -1,7 +1,8 @@
-export interface Jogo {
+export interface Destaque {
     name: string;
     idJogo:     number;
     tituloJogo: string;
+    downloads: string;
     descJogo:   string;
     tagsJogo:   string;
     imagem1:    string;

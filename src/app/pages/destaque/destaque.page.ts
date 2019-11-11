@@ -2,10 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { JogosService } from '../../services/jogos.service';
 import { MenuController } from '@ionic/angular';
-import { Jogo } from '../../models/jogos.model';
-
+import { Destaque } from '../../models/destaque.model';
+import { DestaqueService } from '../../services/destaque.service';
 
 @Component({
   selector: 'app-destaque',
@@ -14,11 +13,15 @@ import { Jogo } from '../../models/jogos.model';
 })
 export class DestaquePage implements OnInit {
   resultado: Observable<any>;
-  jogos: Jogo[] = [];
+  jogos: Destaque[] = [];
   textoBuscar = '';
   public isSearchbarOpened = false;
-  constructor(public navCtrl: NavController, public http: HttpClient, public jogoServ: DestaqueService, public menuCtrl: MenuController) {
-    this.jogoServ.getJogos()
+
+  constructor(public navCtrl: NavController,
+  public http: HttpClient,
+  public desServ: DestaqueService,
+  public menuCtrl: MenuController) {
+  this.desServ.getJogos()
     .subscribe(resp => this.jogos = resp );
   }
 
@@ -35,9 +38,6 @@ export class DestaquePage implements OnInit {
   ionStart(event) {
     console.log('ionStart Event Triggered!');
   }
-
-
   ngOnInit() {
   }
-
 }
