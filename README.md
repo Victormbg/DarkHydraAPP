@@ -1,17 +1,17 @@
 # DarkHydraAPP
-APP IONIC DARK HYDRA
+APP IONIC DARK HYDRA<br>
 
 # REMOTEMYSQL
 DB_PASSWORD - gJK5MPtqBZ<br>
-DB_USER - FpNo2uBuSR
+DB_USER - FpNo2uBuSR<br>
 
 # CONTA
 Email: tcctron@gmail.com<br>
-Senha: Pentagrama8
+Senha: Pentagrama8<br>
 
 # CONTA HEROKU
 E-mail: tcctron@gmail.com<br>
-Senha: Pentagrama8!
+Senha: Pentagrama8!<br>
 
 # INSTALL HEROKU
 sudo snap install --classic heroku<br>
@@ -37,12 +37,12 @@ https://sleepy-river-60466.herokuapp.com/jogos?apikey=scadifcabif<br>
 https://rogerdudler.github.io/git-guide/index.pt_BR.html
 
 # LINK API - NOVOS
-https://sleepy-river-60466.herokuapp.com/jogos/t
-https://sleepy-river-60466.herokuapp.com/jogos/p?id=1
+https://sleepy-river-60466.herokuapp.com/jogos/t<br>
+https://sleepy-river-60466.herokuapp.com/jogos/p?id=1<br>
 
 # LINKS DE JOGOS PARA DESTAQUE
 https://teamsalvato.itch.io/ddlc<br>
-https://captaingames.itch.io/enviro-bear-2000
+https://captaingames.itch.io/enviro-bear-2000<br>
 
 # LINKS PARA JOGOS
 https://ffx.itch.io/ffx-runner-hd<br>
@@ -52,6 +52,9 @@ https://ffx.itch.io/ffx-runner-hd<br>
 https://itch.io/games/downloadable/free<br>
 
 # LOGIN
-https://sleepy-river-60466.herokuapp.com/user/l?login=teste1&senha=123
-https://sleepy-river-60466.herokuapp.com/user/l
-https://blog.flicher.net/ionic-4-user-registration-login-tutorial/
+https://sleepy-river-60466.herokuapp.com/user/l?login=teste1&senha=123<br>
+https://sleepy-river-60466.herokuapp.com/user/l<br>
+https://blog.flicher.net/ionic-4-user-registration-login-tutorial/<br>
+
+# COMANDO PRA TRANSFORMA EM APK
+ionic cordova build android --prod --release<br>
