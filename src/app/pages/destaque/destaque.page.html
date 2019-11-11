@@ -6,11 +6,12 @@
     <ion-title *ngIf="!isSearchbarOpened">
       Destaque
     </ion-title>
+    <!--
     <ion-searchbar
       placeholder="Pesquisa"
       *ngIf="isSearchbarOpened"
       showCancelButton="true"
-      
+
       (ionCancel)="isSearchbarOpened = false"
     ></ion-searchbar>
     <ion-buttons slot="end">
@@ -22,6 +23,7 @@
         <ion-icon name="md-search" style="color: white"></ion-icon>
       </ion-button>
     </ion-buttons>
+    -->
   </ion-toolbar>
 </ion-header>
 
@@ -41,33 +43,14 @@
     </ion-refresher-content>
   </ion-refresher>
 
-  <ion-item routerLink="/" class="img1">
-    <img src="/assets/img/doom1.jpg" />
-    <ion-label>DOOM 1</ion-label>
-  </ion-item>
+<ion-list>
+    <ion-item
+      *ngFor="let jogo of jogos"
+      [routerLink]="['/pagina-jogo', jogo.idJogo]"
+    >
+      <img src="{{ jogo.imagem1 }}" />
+      <ion-label>{{ jogo.tituloJogo }}</ion-label>
+    </ion-item>
+  </ion-list>
 
-  <ion-item routerLink="/" class="img2">
-    <img src="/assets/img/doom2.jpg" />
-    <ion-label>DOOM 2</ion-label>
-  </ion-item>
-
-  <ion-item routerLink="/" class="img1">
-    <img src="/assets/img/doom1.jpg" />
-    <ion-label>DOOM 1</ion-label>
-  </ion-item>
-
-  <ion-item routerLink="/" class="img2">
-    <img src="/assets/img/doom2.jpg" />
-    <ion-label>DOOM 2</ion-label>
-  </ion-item>
-
-  <ion-item routerLink="/" class="img1">
-    <img src="/assets/img/doom1.jpg" />
-    <ion-label>DOOM 1</ion-label>
-  </ion-item>
-
-  <ion-item routerLink="/" class="img2">
-    <img src="/assets/img/doom2.jpg" />
-    <ion-label>DOOM 2</ion-label>
-  </ion-item>
 </ion-content>

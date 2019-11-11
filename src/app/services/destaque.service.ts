@@ -18,24 +18,21 @@ export interface Jogo {
 }
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
-export class JogosService {
-  url = "https://sleepy-river-60466.herokuapp.com/jogos/t";
-  url1 = "https://sleepy-river-60466.herokuapp.com/jogos/p?id=1";
-  url2 = "https://sleepy-river-60466.herokuapp.com/jogos"
-
+export class DestaqueService {
   constructor(public http: HttpClient) {
     console.log("Service Ativado");
   }
 
   getJogos() {
     return this.http.get<Jogo[]>(
-      "https://sleepy-river-60466.herokuapp.com/jogos/t"
+      "https://sleepy-river-60466.herokuapp.com/jogos/d"
     );
   }
 
   getJogoID(idJogo) {
     return this.http.get<Jogo>("https://sleepy-river-60466.herokuapp.com/jogos/p?id="+idJogo);
   }
+
 }
