@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+
 ion-menu-button {
   color: white;
 }
@@ -21,6 +23,7 @@ ion-searchbar {
 ion-title {
   color: white;
   font-size: 30px;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 ion-refresher {
@@ -43,4 +46,5 @@ ion-label p{
   color: white;
   padding: 5px;
   font-size: 16px;
+  font-family: 'Titillium Web', sans-serif;
 }

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./amigos.page.scss'],
 })
 export class AmigosPage implements OnInit {
-
+  public isSearchbarOpened = false;
   search: boolean = false;
 
   constructor() { }

@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { JogosService } from '../../services/jogos.service';
 import { MenuController } from '@ionic/angular';
 import { Jogo } from '../../models/jogos.model';
+
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.page.html',
@@ -19,12 +20,5 @@ export class PerfilPage implements OnInit {
    }
 
   ngOnInit() {
-    //this.listaJogos();
   }
- /*
-  listaJogos() {
-    this.resultado = this.jogo.listar();
-    console.log("RESUL:",this.resultado);
-  }
-  */
 }

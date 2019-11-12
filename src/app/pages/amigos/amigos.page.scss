@@ -25,3 +25,16 @@ ion-item ion-label {
   color: white;
   padding-left: 20px;
 }
+
+ion-toolbar {
+  --ion-background-color: black;
+}
+
+ion-searchbar {
+  --placeholder-color: black;
+  --icon-color: black;
+  --color: black;
+  --cancel-button-color: black;
+  --background: white;
+}
+

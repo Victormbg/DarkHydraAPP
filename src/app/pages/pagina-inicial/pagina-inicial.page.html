@@ -1,56 +1,35 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title *ngIf="!isSearchbarOpened">
-      Jogos
-    </ion-title>
-    <ion-searchbar
-      placeholder="Pesquisa"
-      (ionChange)="buscarJogos($event)"
-      *ngIf="isSearchbarOpened"
-      showCancelButton="true"
-      (ionCancel)="isSearchbarOpened = false"
-    >
-      ></ion-searchbar
-    >
-    <ion-buttons slot="end">
-      <ion-button
-        icon-only
-        *ngIf="!isSearchbarOpened"
-        (click)="isSearchbarOpened = true"
-      >
-        <ion-icon name="md-search" style="color: white"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title *ngIf="!isSearchbarOpened">
+			Jogos
+		</ion-title>
+		<ion-searchbar placeholder="Pesquisa" (ionChange)="buscarJogos($event)" *ngIf="isSearchbarOpened"
+			showCancelButton="true" (ionCancel)="isSearchbarOpened = false"></ion-searchbar>
+		<ion-buttons slot="end">
+			<ion-button icon-only *ngIf="!isSearchbarOpened" (click)="isSearchbarOpened = true">
+				<ion-icon name="md-search" style="color: white"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-refresher
-    slot="fixed"
-    (ionRefresh)="ionRefresh($event)"
-    (ionPull)="ionPull($event)"
-    (ionStart)="ionStart($event)"
-  >
-    <ion-refresher-content
-      pullingIcon="arrow-dropdown"
-      pullingText="Puxe para atualizar"
-      refreshingSpinner="circles"
-      refreshingText="Atualizando..."
-    >
-    </ion-refresher-content>
-  </ion-refresher>
-  <ion-list>
-    <ion-item text-wrap
-      *ngFor="let jogo of jogos | filtro: textoBuscar"
-      [routerLink]="['/pagina-jogo', jogo.idJogo]"
-    >
-      <img src="{{ jogo.imagem1 }}" />
-      <ion-label text-wrap>
-      <p>{{ jogo.tituloJogo }}</p>
-      <p>Tags {{ jogo.tagsJogo }}</p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+	<ion-refresher slot="fixed" (ionRefresh)="ionRefresh($event)" (ionPull)="ionPull($event)"
+		(ionStart)="ionStart($event)">
+		<ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Puxe para atualizar"
+			refreshingSpinner="circles" refreshingText="Atualizando...">
+		</ion-refresher-content>
+	</ion-refresher>
+	<ion-list>
+		<ion-item text-wrap *ngFor="let jogo of jogos | filtro: textoBuscar"
+			[routerLink]="['/pagina-jogo', jogo.idJogo]">
+			<img src="{{ jogo.imagem1 }}" />
+			<ion-label text-wrap>
+				<p>{{ jogo.tituloJogo }}</p>
+				<p>Tags {{ jogo.tagsJogo }}</p>
+			</ion-label>
+		</ion-item>
+	</ion-list>
 </ion-content>

@@ -1,33 +1,33 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Perfil
-    </ion-title>
-  </ion-toolbar>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>
+			Perfil
+		</ion-title>
+	</ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-avatar>
-    <img src="../../../assets/img/avatar.jpg" />
+	<ion-avatar>
+		<img src="../../../assets/img/avatar.jpg" />
   </ion-avatar>
-  <div class="ion-text-center">
-    <ion-label class="nome">Nome de Usuario</ion-label>
-    <br/><br/>
-    <ion-label class="des">DESCRICAO:</ion-label>
-  </div>
-  <p>
-    Porque as pessoas loucas o bastante para acreditar que podem mudar o mundo, são as que o mudam.
-  </p>
-  <ion-card [routerLink]="['/biblioteca']">
-    <ion-card-header >
-      <ion-card-title>Minha Biblioteca</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-avatar class="jogoI">
-        <img *ngFor="let jogo of jogos | async" src="{{ jogo.imagem1 }}" />
+		<div class="ion-text-center">
+			<ion-label class="nome">Nome de Usuario</ion-label>
+			<br/><br/>
+			<ion-label class="des">DESCRICAO:</ion-label>
+		</div>
+		<p>
+			Porque as pessoas loucas o bastante para acreditar que podem mudar o mundo, são as que o mudam.
+		</p>
+		<ion-card [routerLink]="['/biblioteca']">
+			<ion-card-header>
+				<ion-card-title>Minha Biblioteca</ion-card-title>
+			</ion-card-header>
+			<ion-card-content>
+				<ion-avatar class="jogoI">
+					<img *ngFor="let jogo of jogos | async" src="{{ jogo.imagem1 }}" />
       </ion-avatar>
-    </ion-card-content>
-  </ion-card>
+			</ion-card-content>
+		</ion-card>
 </ion-content>
