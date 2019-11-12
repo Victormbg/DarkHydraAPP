@@ -25,9 +25,10 @@
 				<ion-card-title>Minha Biblioteca</ion-card-title>
 			</ion-card-header>
 			<ion-card-content>
-				<ion-avatar class="jogoI">
+	  <ion-avatar class="jogoI">
 					<img *ngFor="let jogo of jogos | async" src="{{ jogo.imagem1 }}" />
       </ion-avatar>
 			</ion-card-content>
 		</ion-card>
 </ion-content>
+

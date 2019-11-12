@@ -15,14 +15,40 @@
 			refreshingSpinner="circles" refreshingText="Atualizando...">
 		</ion-refresher-content>
 	</ion-refresher>
+    <h2>Jogo em Destaque</h2>
+    <img src="../../../assets/img/gta.jpg" />
+    <h1>Jogos Populares</h1>
+	<ion-slides [options]="sliderConfig">
+		<ion-slide *ngFor="let jogo of jogos" [routerLink]="['/pagina-jogo', jogo.idJogo]" pager="true">
+			<ion-card>
+				<ion-card-header>
+					<ion-card-title>
+						{{ jogo.tituloJogo }}
+					</ion-card-title>
+					<ion-card-content>
+						<img src="{{ jogo.imagem1 }}" />
+					</ion-card-content>
+				</ion-card-header>
+			</ion-card>
+		</ion-slide>
+	</ion-slides>
 
-	<ion-list>
-		<ion-item *ngFor="let jogo of jogos" [routerLink]="['/pagina-jogo', jogo.idJogo]">
-			<img src="{{ jogo.imagem1 }}" />
-			<ion-label>
-                <p>{{ jogo.tituloJogo }}</p>
-                <p>Downloads {{ jogo.downloads }}</p>
-            </ion-label>
-        </ion-item>
-    </ion-list>
+    <h1>Jogos Mais Baixados</h1>
+	<ion-slides [options]="sliderConfig">
+		<ion-slide *ngFor="let jogo of jogos" 
+        [routerLink]="['/pagina-jogo', jogo.idJogo]" pager="true">
+			<ion-reorder slot="start"></ion-reorder>
+            <ion-card>
+				<ion-card-header>
+					<ion-card-title>
+						{{ jogo.tituloJogo }}
+					</ion-card-title>
+					<ion-card-content>
+						<img src="{{ jogo.imagem1 }}" />
+					</ion-card-content>
+				</ion-card-header>
+			</ion-card>
+		</ion-slide>
+	</ion-slides>
+
 </ion-content>
