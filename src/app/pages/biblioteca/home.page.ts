@@ -22,7 +22,6 @@ export class HomePage implements OnInit {
     .subscribe(resp => this.jogos = resp );
   }
 
-  // CODIGO PARA FUNCIONAR O ATUALIZAR //////////////////////////////////
   ionRefresh(event) {
     console.log('Pull Event Triggered!');
     setTimeout(() => {
@@ -39,23 +38,21 @@ export class HomePage implements OnInit {
     console.log('ionStart Event Triggered!');
   }
 
-  // FIM DO CODIGO PARA ATUALIZAR ///////////////////////////////////////////
-
+  
   ngOnInit() { }
 
-  // APARECER O SIDEMENU POR BUG POIS AO SER REMOVIDO NO
-  // LOGIN E PRECISO CHAMAR ELE AQUI
   ionViewWillEnter() {
     this.menuCtrl.enable(true);
   }
-
-  // FIM DA FUNÇÃO PARA INICIALIZAR O SIDEMENU
-
-  // FUNÇÂO PARA FAZER A BUSCA NA BARRA DE PESQUISA
 
   buscarJogos( event ) {
     const texto = event.target.value;
     this.textoBuscar = texto;
   }
+
+
+
+
+ 
 
 }

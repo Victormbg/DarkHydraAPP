@@ -14,14 +14,23 @@ import { map } from 'rxjs/operators';
 })
 export class PaginaJogoPage implements OnInit {
   jogos = null;
+  comentarios = null;
   idJogo  = null;
+  //DECLARACAO DO JOGOS
   tituloJogo: string;
-  descJogo:   string;
-  tagsJogo:   string;
-  imagem1:    string;
-  imagem2:    string;
-  imagem3:    string;
-  imagem4:    string;
+  descJogo: string;
+  tagsJogo: string;
+  imagem1: string;
+  imagem2: string;
+  imagem3: string;
+  imagem4: string;
+  // DECLARACAO DOS COMENTARIOS
+  idComentario: number;
+  idPerfil: number;
+  comentario: string;
+  tipoComentario: string;
+  nomePerfil: string;
+  imagemPerfil: string;
   // FUNÇÃO DO SLIDE
   @ViewChild(IonSlides, { static: true }) slides: IonSlides;
   goToSlide() {
@@ -41,6 +50,11 @@ export class PaginaJogoPage implements OnInit {
     this.jogoSer.getJogoID(this.idJogo).subscribe(res => {
       this.jogos = res;
       console.log(this.jogos);
+    });
+
+    this.jogoSer.getComentarios(this.idJogo).subscribe(res => {
+      this.comentarios = res;
+      console.log(this.comentarios);
     });
   }
 }
