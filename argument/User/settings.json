@@ -1,0 +1,6 @@
+{
+    "editor.suggestSelection": "first",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

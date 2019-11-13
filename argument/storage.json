@@ -286,6 +286,10 @@
                         "label": "Move &&Line Down"
                     },
                     {
+                        "id": "editor.action.duplicateSelection",
+                        "label": "&&Duplicate Selection"
+                    },
+                    {
                         "id": "vscode.menubar.separator"
                     },
                     {
@@ -369,6 +373,11 @@
                                 {
                                     "id": "workbench.action.toggleActivityBarVisibility",
                                     "label": "Show &&Activity Bar",
+                                    "checked": true
+                                },
+                                {
+                                    "id": "workbench.action.toggleEditorVisibility",
+                                    "label": "Show &&Editor Area",
                                     "checked": true
                                 },
                                 {
@@ -1178,8 +1187,9 @@
                 "userSettingsLabel": "ctrl+shift+f"
             },
             "workbench.view.scm": {
-                "label": "Ctrl+Shift+G",
-                "userSettingsLabel": "ctrl+shift+g"
+                "label": "Ctrl+Shift+G G",
+                "isNative": false,
+                "userSettingsLabel": "ctrl+shift+g g"
             },
             "workbench.view.debug": {
                 "label": "Ctrl+Shift+D",

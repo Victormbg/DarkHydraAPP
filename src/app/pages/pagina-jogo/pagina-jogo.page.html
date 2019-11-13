@@ -6,7 +6,6 @@
     <ion-title>
       {{ jogos?.tituloJogo }}
     </ion-title>
-
   </ion-toolbar>
 </ion-header>
 <ion-content>
@@ -32,14 +31,17 @@
       {{ jogos?.tagsJogo }}
     </p>
 
-    <p>
-      Comentario:{{ comentarios?.comentario }}
-    </p>
+    <ion-item text-wrap *ngFor="let comentario of comentarios">
+      <img src="{{ comentario.imagemPerfil }}" />
+      <ion-label text-wrap>
+        <p>{{ comentario.nomePerfil }}</p>
+        <p>Tags {{ comentario.comentario }}</p>
+      </ion-label>
+    </ion-item>
 
-
-      <ion-item>
-    <ion-label position="stacked">Comentarios</ion-label>
-    <ion-textarea></ion-textarea>
-  </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Comentarios</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
   </ion-content>
 </ion-content>
