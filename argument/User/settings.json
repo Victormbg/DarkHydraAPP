@@ -2,5 +2,6 @@
     "editor.suggestSelection": "first",
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "git.autofetch": true
 }
