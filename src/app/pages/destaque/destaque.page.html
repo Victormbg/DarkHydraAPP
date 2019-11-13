@@ -18,11 +18,11 @@
     <h2>Jogo em Destaque</h2>
     <img src="../../../assets/img/gta.jpg" />
     <h1>Jogos Populares</h1>
-	<ion-slides [options]="sliderConfig">
+	<ion-slides [options]="sliderConfig" text-wrap>
 		<ion-slide *ngFor="let jogo of jogos" [routerLink]="['/pagina-jogo', jogo.idJogo]" pager="true">
 			<ion-card>
-				<ion-card-header>
-					<ion-card-title>
+				<ion-card-header text-wrap>
+					<ion-card-title text-wrap>
 						{{ jogo.tituloJogo }}
 					</ion-card-title>
 					<ion-card-content>
@@ -34,13 +34,13 @@
 	</ion-slides>
 
     <h1>Jogos Mais Baixados</h1>
-	<ion-slides [options]="sliderConfig">
+	<ion-slides [options]="sliderConfig" text-wrap>
 		<ion-slide *ngFor="let jogo of jogos" 
         [routerLink]="['/pagina-jogo', jogo.idJogo]" pager="true">
 			<ion-reorder slot="start"></ion-reorder>
             <ion-card>
-				<ion-card-header>
-					<ion-card-title>
+				<ion-card-header text-wrap>
+					<ion-card-title text-wrap>
 						{{ jogo.tituloJogo }}
 					</ion-card-title>
 					<ion-card-content>

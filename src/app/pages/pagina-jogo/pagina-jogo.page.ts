@@ -57,4 +57,14 @@ export class PaginaJogoPage implements OnInit {
       console.log(this.comentarios);
     });
   }
+
+  enviarComentario() {
+    var url = ("https://sleepy-river-60466.herokuapp.com/jogos/comentario?id="+this.idJogo);
+    let postData = new FormData();
+    postData.append('key','value');
+    this.jogos = this.http.post(url, postData);
+    this.jogos.subscribe(jogo => {
+      console.log(jogo);
+    });
+  }
 }

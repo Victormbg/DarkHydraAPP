@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
 
 ion-back-button {
   --color: white;
@@ -15,7 +15,7 @@ ion-toolbar {
 ion-title {
   color: white;
   font-size: 30px;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
 }
 
 h1,
@@ -32,15 +32,48 @@ img {
   width: 370px;
 }
 
-ion-item img{
-  height: 100px;
-  width: 100px;
+ion-item img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
 }
 
-ion-label{
+ion-label p {
+  text-align: left;
   color: white;
 }
 
-ion-label p{
+.p-img{
+  font-size: 25px;
+}
+
+ion-textarea{
+  width: calc(100% - 10px);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   color: white;
+  font-size: 20px;
+}
+
+ion-icon{
+  color: white;
+  font-size: 30px;
+}
+ion-list-header ion-label{
+  color:white;
+  font-size: 25px;
+}
+
+ion-radio-group ion-item{
+  color:white;
+}
+
+.tags{
+  margin: auto;
+}
+
+ion-button{
+  color: white;
+  font-size: 20px;
 }

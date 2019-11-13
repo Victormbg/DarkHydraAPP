@@ -27,21 +27,52 @@
       {{ jogos?.descJogo }}
     </p>
     <h2>TAGS DO JOGO</h2>
-    <p>
+    <p class="tags">
       {{ jogos?.tagsJogo }}
     </p>
-
-    <ion-item text-wrap *ngFor="let comentario of comentarios">
-      <img src="{{ comentario.imagemPerfil }}" />
-      <ion-label text-wrap>
-        <p>{{ comentario.nomePerfil }}</p>
-        <p>Tags {{ comentario.comentario }}</p>
-      </ion-label>
-    </ion-item>
-
+    <h1>
+      <ion-icon name="mail-open"></ion-icon>
+      Comentarios
+    </h1>
+    <ion-list *ngFor="let comentario of comentarios">
+      <h1 *ngIf="comentarios.length == 0">Nenhum comentário encontrado.</h1>
+      <ion-item text-wrap >
+        <img src="{{ comentario.imagemPerfil }}" />
+        <ion-label text-wrap>
+          <p class="p-img">{{ comentario.nomePerfil }}</p>
+          <p>{{ comentario.comentario }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <h1>Adicionar Comentarios</h1>
     <ion-item>
-      <ion-label position="stacked">Comentarios</ion-label>
-      <ion-textarea></ion-textarea>
+      <ion-textarea placeholder="Digite seu comentario aqui..."></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-list>
+        <ion-radio-group>
+          <ion-list-header>
+            <ion-label>Sua avaliação foi:</ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label>Positiva</ion-label>
+            <ion-radio slot="start" value="pos" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Negativa</ion-label>
+            <ion-radio slot="start" value="neg"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      
+      <ion-item>
+          <ion-buttons end>
+            <ion-button (click)="enviarComentario()">
+              Enviar
+              <ion-icon name="send"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+      </ion-list>
     </ion-item>
   </ion-content>
 </ion-content>
