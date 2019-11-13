@@ -23,7 +23,7 @@ export class JogosService {
     return this.http.get<Jogo[]>("https://sleepy-river-60466.herokuapp.com/jogos/p?id="+idJogo);
   }
 
-  getComentarios(idJogo){
+  getComentarios(idJogo) {
     return this.http.get<Comentario[]>("https://sleepy-river-60466.herokuapp.com/jogos/comentario?id="+idJogo);
   }
 }
