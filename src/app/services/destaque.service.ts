@@ -1,11 +1,11 @@
-import { Destaque } from './../models/destaque.model';
+import { Destaque } from "./../models/destaque.model";
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class DestaqueService {
   constructor(public http: HttpClient) {
@@ -19,7 +19,8 @@ export class DestaqueService {
   }
 
   getJogoID(idJogo) {
-    return this.http.get<Destaque[]>("https://sleepy-river-60466.herokuapp.com/jogos/p?id="+idJogo);
+    return this.http.get<Destaque[]>(
+      "https://sleepy-river-60466.herokuapp.com/jogos/p?id=" + idJogo
+    );
   }
-
 }

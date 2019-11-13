@@ -1,54 +1,68 @@
 <ion-header>
-	<ion-toolbar>
-		<ion-buttons slot="start">
-			<ion-menu-button></ion-menu-button>
-		</ion-buttons>
-		<ion-title>
-			Destaque
-		</ion-title>
-	</ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Destaque
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
 <ion-content>
-	<ion-refresher slot="fixed" (ionRefresh)="ionRefresh($event)" (ionPull)="ionPull($event)"
-		(ionStart)="ionStart($event)">
-		<ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Puxe para atualizar"
-			refreshingSpinner="circles" refreshingText="Atualizando...">
-		</ion-refresher-content>
-	</ion-refresher>
-    <h2>Jogo em Destaque</h2>
-    <img src="../../../assets/img/gta.jpg" />
-    <h1>Jogos Populares</h1>
-	<ion-slides [options]="sliderConfig" text-wrap>
-		<ion-slide *ngFor="let jogo of jogos" [routerLink]="['/pagina-jogo', jogo.idJogo]" pager="true">
-			<ion-card>
-				<ion-card-header text-wrap>
-					<ion-card-title text-wrap>
-						{{ jogo.tituloJogo }}
-					</ion-card-title>
-					<ion-card-content>
-						<img src="{{ jogo.imagem1 }}" />
-					</ion-card-content>
-				</ion-card-header>
-			</ion-card>
-		</ion-slide>
-	</ion-slides>
+  <ion-refresher
+    slot="fixed"
+    (ionRefresh)="ionRefresh($event)"
+    (ionPull)="ionPull($event)"
+    (ionStart)="ionStart($event)"
+  >
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Puxe para atualizar"
+      refreshingSpinner="circles"
+      refreshingText="Atualizando..."
+    >
+    </ion-refresher-content>
+  </ion-refresher>
+  <h2>Jogo em Destaque</h2>
+  <img src="../../../assets/img/gta.jpg" />
+  <h1>Jogos Populares</h1>
+  <ion-slides [options]="sliderConfig" text-wrap>
+    <ion-slide
+      *ngFor="let jogo of jogos"
+      [routerLink]="['/pagina-jogo', jogo.idJogo]"
+      pager="true"
+    >
+      <ion-card>
+        <ion-card-header text-wrap>
+          <ion-card-title text-wrap>
+            {{ jogo.tituloJogo }}
+          </ion-card-title>
+          <ion-card-content>
+            <img src="{{ jogo.imagem1 }}" />
+          </ion-card-content>
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
 
-    <h1>Jogos Mais Baixados</h1>
-	<ion-slides [options]="sliderConfig" text-wrap>
-		<ion-slide *ngFor="let jogo of jogos" 
-        [routerLink]="['/pagina-jogo', jogo.idJogo]" pager="true">
-			<ion-reorder slot="start"></ion-reorder>
-            <ion-card>
-				<ion-card-header text-wrap>
-					<ion-card-title text-wrap>
-						{{ jogo.tituloJogo }}
-					</ion-card-title>
-					<ion-card-content>
-						<img src="{{ jogo.imagem1 }}" />
-					</ion-card-content>
-				</ion-card-header>
-			</ion-card>
-		</ion-slide>
-	</ion-slides>
-
+  <h1>Jogos Mais Baixados</h1>
+  <ion-slides [options]="sliderConfig" text-wrap>
+    <ion-slide
+      *ngFor="let jogo of jogos"
+      [routerLink]="['/pagina-jogo', jogo.idJogo]"
+      pager="true"
+    >
+      <ion-reorder slot="start"></ion-reorder>
+      <ion-card>
+        <ion-card-header text-wrap>
+          <ion-card-title text-wrap>
+            {{ jogo.tituloJogo }}
+          </ion-card-title>
+          <ion-card-content>
+            <img src="{{ jogo.imagem1 }}" />
+          </ion-card-content>
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

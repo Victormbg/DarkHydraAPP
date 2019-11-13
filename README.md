@@ -46,3 +46,7 @@ https://blog.flicher.net/ionic-4-user-registration-login-tutorial/<br>
 
 # COMANDO PRA TRANSFORMA EM APK
 ionic cordova build android --prod --release<br>
+
+# LINK API AMIGOS ANALISAR
+https://sleepy-river-60466.herokuapp.com/user/perfil/seguidor/mutuo?u=
+https://sleepy-river-60466.herokuapp.com/user/perfil/seguidor/mutuo?u=96101

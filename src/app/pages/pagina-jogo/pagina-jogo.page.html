@@ -36,7 +36,7 @@
     </h1>
     <ion-list *ngFor="let comentario of comentarios">
       <h1 *ngIf="comentarios.length == 0">Nenhum comentário encontrado.</h1>
-      <ion-item text-wrap >
+      <ion-item text-wrap>
         <img src="{{ comentario.imagemPerfil }}" />
         <ion-label text-wrap>
           <p class="p-img">{{ comentario.nomePerfil }}</p>
@@ -63,8 +63,8 @@
             <ion-radio slot="start" value="neg"></ion-radio>
           </ion-item>
         </ion-radio-group>
-      
-      <ion-item>
+
+        <ion-item>
           <ion-buttons end>
             <ion-button (click)="enviarComentario()">
               Enviar

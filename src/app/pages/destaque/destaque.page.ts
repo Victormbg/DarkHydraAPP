@@ -16,8 +16,8 @@ export class DestaquePage implements OnInit {
   jogos: Destaque[] = [];
   textoBuscar = "";
   public isSearchbarOpened = false;
-jogo: any;
-    
+  jogo: any;
+
   constructor(
     public navCtrl: NavController,
     public http: HttpClient,
@@ -48,5 +48,4 @@ jogo: any;
     initialSlide: 0,
     slidesPerView: 1
   };
-
 }

@@ -5,7 +5,7 @@ import { NavController } from "@ionic/angular";
 import { HttpClient } from "@angular/common/http";
 import { JogosService } from "../../services/jogos.service";
 import { ActivatedRoute } from "@angular/router";
-import { map } from 'rxjs/operators';
+import { map } from "rxjs/operators";
 
 @Component({
   selector: "app-pagina-jogo",
@@ -15,7 +15,7 @@ import { map } from 'rxjs/operators';
 export class PaginaJogoPage implements OnInit {
   jogos = null;
   comentarios = null;
-  idJogo  = null;
+  idJogo = null;
   //DECLARACAO DO JOGOS
   tituloJogo: string;
   descJogo: string;
@@ -45,7 +45,7 @@ export class PaginaJogoPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.idJogo = this.route.snapshot.params['idJogo'];
+    this.idJogo = this.route.snapshot.params["idJogo"];
 
     this.jogoSer.getJogoID(this.idJogo).subscribe(res => {
       this.jogos = res;
@@ -59,9 +59,11 @@ export class PaginaJogoPage implements OnInit {
   }
 
   enviarComentario() {
-    var url = ("https://sleepy-river-60466.herokuapp.com/jogos/comentario?id="+this.idJogo);
+    var url =
+      "https://sleepy-river-60466.herokuapp.com/jogos/comentario?id=" +
+      this.idJogo;
     let postData = new FormData();
-    postData.append('key','value');
+    postData.append("key", "value");
     this.jogos = this.http.post(url, postData);
     this.jogos.subscribe(jogo => {
       console.log(jogo);
