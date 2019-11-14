@@ -3,7 +3,7 @@ import { NavController } from "@ionic/angular";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { MenuController } from "@ionic/angular";
-import { Destaque } from "../../models/destaque.model";
+import { Destaque } from "../../models/destaque";
 import { DestaqueService } from "../../services/destaque.service";
 
 @Component({

@@ -16,15 +16,11 @@
 </ion-header>
 <ion-content>
 	<ion-list>
-    <ion-item
-      text-wrap
-      *ngFor="let amigo of amigos"
-      [routerLink]="['/pagina-amigos', amigo.idPerfil]"
-    >
-      <img src="{{ amigo.imagemPerfil }}" />
-      <ion-label text-wrap>
-        <p>{{ amigo.nomePerfil }}</p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+		<ion-item text-wrap *ngFor="let amigo of amigos" [routerLink]="['/pagina-amigos', amigo.idPerfil]">
+			<img src="{{ amigo.imagemPerfil }}" />
+			<ion-label text-wrap>
+				<p>{{ amigo.nomePerfil }}</p>
+			</ion-label>
+		</ion-item>
+	</ion-list>
 </ion-content>

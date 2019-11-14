@@ -1,78 +1,78 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/biblioteca"></ion-back-button>
-    </ion-buttons>
-    <ion-title>
-      {{ jogos?.tituloJogo }}
-    </ion-title>
-  </ion-toolbar>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button defaultHref="/biblioteca"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			{{ jogos?.tituloJogo }}
+		</ion-title>
+	</ion-toolbar>
 </ion-header>
 <ion-content>
-  <img src="" style="height: 100px; width: 100%;" alt="" />
-  <ion-content>
-    <ion-slides pager="true">
-      <ion-slide>
-        <img src="{{ jogos?.imagem2 }}" />
+	<img src="" style="height: 100px; width: 100%;" alt="" />
+	<ion-content>
+		<ion-slides pager="true">
+			<ion-slide>
+				<img src="{{ jogos?.imagem2 }}" />
       </ion-slide>
-      <ion-slide>
-        <img src="{{ jogos?.imagem3 }}" />
+				<ion-slide>
+					<img src="{{ jogos?.imagem3 }}" />
       </ion-slide>
-      <ion-slide>
-        <img src="{{ jogos?.imagem4 }}" />
+					<ion-slide>
+						<img src="{{ jogos?.imagem4 }}" />
       </ion-slide>
-    </ion-slides>
-    <h2>DESCRICÃO DO JOGO</h2>
-    <p>
-      {{ jogos?.descJogo }}
-    </p>
-    <h2>TAGS DO JOGO</h2>
-    <p class="tags">
-      {{ jogos?.tagsJogo }}
-    </p>
-    <h1>
-      <ion-icon name="mail-open"></ion-icon>
-      Comentarios
-    </h1>
-    <ion-list *ngFor="let comentario of comentarios">
-      <h1 *ngIf="comentarios.length == 0">Nenhum comentário encontrado.</h1>
-      <ion-item text-wrap>
-        <img src="{{ comentario.imagemPerfil }}" />
-        <ion-label text-wrap>
-          <p class="p-img">{{ comentario.nomePerfil }}</p>
-          <p>{{ comentario.comentario }}</p>
-        </ion-label>
-      </ion-item>
-    </ion-list>
-    <h1>Adicionar Comentarios</h1>
-    <ion-item>
-      <ion-textarea placeholder="Digite seu comentario aqui..."></ion-textarea>
-    </ion-item>
-    <ion-item>
-      <ion-list>
-        <ion-radio-group>
-          <ion-list-header>
-            <ion-label>Sua avaliação foi:</ion-label>
-          </ion-list-header>
-          <ion-item>
-            <ion-label>Positiva</ion-label>
-            <ion-radio slot="start" value="pos" checked></ion-radio>
-          </ion-item>
-          <ion-item>
-            <ion-label>Negativa</ion-label>
-            <ion-radio slot="start" value="neg"></ion-radio>
-          </ion-item>
-        </ion-radio-group>
+		</ion-slides>
+		<h2>DESCRICÃO DO JOGO</h2>
+		<p>
+			{{ jogos?.descJogo }}
+		</p>
+		<h2>TAGS DO JOGO</h2>
+		<p class="tags">
+			{{ jogos?.tagsJogo }}
+		</p>
+		<h1>
+			<ion-icon name="mail-open"></ion-icon>
+			Comentarios
+		</h1>
+		<ion-list *ngFor="let comentario of comentarios">
+			<h1 *ngIf="comentarios.length == 0">Nenhum comentário encontrado.</h1>
+			<ion-item text-wrap>
+				<img src="{{ comentario.imagemPerfil }}" />
+				<ion-label text-wrap>
+					<p class="p-img">{{ comentario.nomePerfil }}</p>
+					<p>{{ comentario.comentario }}</p>
+				</ion-label>
+			</ion-item>
+		</ion-list>
+		<h1>Adicionar Comentarios</h1>
+		<ion-item>
+			<ion-textarea placeholder="Digite seu comentario aqui..."></ion-textarea>
+		</ion-item>
+		<ion-item>
+			<ion-list>
+				<ion-radio-group>
+					<ion-list-header>
+						<ion-label>Sua avaliação foi:</ion-label>
+					</ion-list-header>
+					<ion-item>
+						<ion-label>Positiva</ion-label>
+						<ion-radio slot="start" value="pos" checked></ion-radio>
+					</ion-item>
+					<ion-item>
+						<ion-label>Negativa</ion-label>
+						<ion-radio slot="start" value="neg"></ion-radio>
+					</ion-item>
+				</ion-radio-group>
 
-        <ion-item>
-          <ion-buttons end>
-            <ion-button (click)="enviarComentario()">
-              Enviar
-              <ion-icon name="send"></ion-icon>
-            </ion-button>
-          </ion-buttons>
-        </ion-item>
-      </ion-list>
-    </ion-item>
-  </ion-content>
+				<ion-item>
+					<ion-buttons end>
+						<ion-button (click)="enviarComentario()">
+							Enviar
+							<ion-icon name="send"></ion-icon>
+						</ion-button>
+					</ion-buttons>
+				</ion-item>
+			</ion-list>
+		</ion-item>
+	</ion-content>
 </ion-content>

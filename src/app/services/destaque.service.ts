@@ -1,8 +1,8 @@
-import { Destaque } from "./../models/destaque.model";
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
+import { Destaque } from "../models/destaque";
 
 @Injectable({
   providedIn: "root"

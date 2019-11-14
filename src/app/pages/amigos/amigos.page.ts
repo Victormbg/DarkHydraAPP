@@ -5,7 +5,7 @@ import { Observable } from "rxjs";
 import { MenuController } from "@ionic/angular";
 import { AmigosService } from "../../services/amigos.service";
 import { Amigos } from "../../models/amigos";
- 
+
 @Component({
   selector: "app-amigos",
   templateUrl: "./amigos.page.html",
@@ -21,7 +21,7 @@ export class AmigosPage implements OnInit {
     public amiServ: AmigosService,
     public menuCtrl: MenuController
   ) {
-      this.amiServ.getAmigos().subscribe(resp => (this.amigos = resp));
+    this.amiServ.getAmigos().subscribe(resp => (this.amigos = resp));
   }
 
   ngOnInit() {}

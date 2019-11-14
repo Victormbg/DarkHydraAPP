@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from "@angular/core";
-import { Jogo } from "../models/jogos.model";
+import { Jogo } from "../models/jogos";
 
 @Pipe({
   name: "filtro"
