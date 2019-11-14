@@ -1,19 +1,19 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      {{ amigos?.nomePerfil }}
-    </ion-title>
-  </ion-toolbar>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button defaultHref="/amigos"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			{{ amigos?.nomePerfil }}
+		</ion-title>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <img
+	<img
       src="{{ amigos?.imagemPerfil }}"
     />
-  <h1>DESCRICAO:</h1>
-  <p>{{ amigos?.descricaoPerfil }}</p>
-  
+	<h1>DESCRICAO:</h1>
+	<p>{{ amigos?.descricaoPerfil }}</p>
+
 </ion-content>
