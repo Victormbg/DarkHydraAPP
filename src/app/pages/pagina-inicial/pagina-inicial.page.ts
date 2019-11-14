@@ -12,7 +12,6 @@ import { Jogo } from "../../models/jogos.model";
   styleUrls: ["./pagina-inicial.page.scss"]
 })
 export class PaginaInicialPage implements OnInit {
-  resultado: Observable<any>;
   jogos: Jogo[] = [];
   textoBuscar = "";
   public isSearchbarOpened = false;

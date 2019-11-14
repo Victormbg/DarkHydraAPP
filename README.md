@@ -50,3 +50,6 @@ ionic cordova build android --prod --release<br>
 # LINK API AMIGOS ANALISAR
 https://sleepy-river-60466.herokuapp.com/user/perfil/seguidor/mutuo?u=
 https://sleepy-river-60466.herokuapp.com/user/perfil/seguidor/mutuo?u=96101
+
+# LINK API perfil
+https://sleepy-river-60466.herokuapp.com/user/perfil/p?u=17904

@@ -64,6 +64,11 @@ const routes: Routes = [
       "./pages/pagina-amigos/pagina-amigos.module#PaginaAmigosPageModule"
   },
   {
+    path: "pagina-amigos/:idPerfil",
+    loadChildren:
+      "./pages/pagina-amigos/pagina-amigos.module#PaginaAmigosPageModule"
+  },
+  {
     path: "login",
     loadChildren: "./pages/auth/login/login.module#LoginPageModule"
   }
