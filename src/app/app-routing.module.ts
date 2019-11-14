@@ -64,7 +64,7 @@ const routes: Routes = [
       "./pages/pagina-amigos/pagina-amigos.module#PaginaAmigosPageModule"
   },
   {
-    path: "pagina-amigos/:idPerfil",
+    path: "pagina-amigos/:idSeguido",
     loadChildren:
       "./pages/pagina-amigos/pagina-amigos.module#PaginaAmigosPageModule"
   },

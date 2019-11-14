@@ -48,4 +48,8 @@ export class DestaquePage implements OnInit {
     initialSlide: 0,
     slidesPerView: 1
   };
+
+  ionViewWillEnter() {
+    this.menuCtrl.enable(true);
+  }
 }

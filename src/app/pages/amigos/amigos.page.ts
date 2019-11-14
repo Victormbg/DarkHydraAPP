@@ -21,7 +21,7 @@ export class AmigosPage implements OnInit {
     public amiServ: AmigosService,
     public menuCtrl: MenuController
   ) {
-    this.amiServ.getAmigos().subscribe(resp => (this.amigos = resp));
+    this.amiServ.getAmigos().subscribe(resp => (this.amigos = resp, console.log(this.amigos)));
   }
 
   ngOnInit() {}

@@ -18,10 +18,13 @@ constructor(public http: HttpClient) {
       "https://sleepy-river-60466.herokuapp.com/user/perfil/seguidor/mutuo?u=96101"
     );
   }
-  
-  getAmigoID(idPerfil) {
-    return this.http.get<Perfil[]>(
-      "https://sleepy-river-60466.herokuapp.com/user/perfil/p?u=" + idPerfil
+
+  getAmigoID(idSeguido) {
+
+    console.log("SEGUINDO "+idSeguido);
+
+    return this.http.get<Amigos[]>(
+      "https://sleepy-river-60466.herokuapp.com/user/perfil/p?u=" + idSeguido
     );
   }
 }

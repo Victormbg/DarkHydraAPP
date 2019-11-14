@@ -27,7 +27,7 @@ export class PaginaAmigosPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.idPerfil = this.route.snapshot.params["idPerfil"];
+    this.idPerfil = this.route.snapshot.params["idSeguido"];
 
     this.amiSer.getAmigoID(this.idPerfil).subscribe(res => {
       this.amigos = res;
