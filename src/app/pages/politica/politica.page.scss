@@ -1,16 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
+
 ion-menu-button {
   color: white;
-}
-
-ion-card-title {
-  text-align: center;
-  color: black;
-}
-
-ion-card-content label {
-  color: white;
-  display: block;
-  text-align: center;
 }
 
 ion-content {
@@ -24,16 +15,19 @@ ion-toolbar {
 ion-title {
   color: white;
   font-size: 24px;
+  font-family: "Titillium Web", sans-serif;
 }
 
 p {
   color: white;
   padding-left: 10px;
   padding-right: 10px;
+  font-family: "Titillium Web", sans-serif;
 }
 
 h2 {
   color: white;
   padding-left: 10px;
   padding-right: 10px;
+  font-family: "Titillium Web", sans-serif;
 }

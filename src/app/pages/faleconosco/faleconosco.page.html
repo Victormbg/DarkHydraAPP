@@ -1,9 +1,31 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>faleconosco</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Fale Conosco</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-item>
+    <ion-label>Topico</ion-label>
+    <ion-select placeholder="Escolha uma opção">
+      <ion-select-option value="f">Problema na Plataforma</ion-select-option>
+      <ion-select-option value="m">Dúvida</ion-select-option>
+      <ion-select-option value="m">Feedback</ion-select-option>
+      <ion-select-option value="m">Outro</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-textarea placeholder="Digite sua mensagem aqui..."></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-buttons end>
+      <ion-button (click)="enviarComentario()">
+        Enviar
+        <ion-icon name="send"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
 </ion-content>
