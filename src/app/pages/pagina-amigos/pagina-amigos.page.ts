@@ -19,6 +19,7 @@ export class PaginaAmigosPage implements OnInit {
   descricaoPerfil: string;
   imagemPerfil: string;
   destaquePerfil: string;
+  tipoUsuario: string;
   constructor(
     public navCtrl: NavController,
     public http: HttpClient,
