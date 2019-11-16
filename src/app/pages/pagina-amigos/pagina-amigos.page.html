@@ -9,15 +9,26 @@
 	</ion-toolbar>
 </ion-header>
 
-<ion-content>
-    	<img
+<ion-content onLoad="loadApp()">
+	<ion-item>
+		<img
+      src="{{ amigos?.imagemPerfil }}"
+        />
+		<ion-label text-wrap>
+			<p>Perfil de {{ amigos?.tipoUsuario }}</p>
+			<h1>DESCRICAO:</h1>
+			<p>{{ amigos?.descricaoPerfil }}</p>
+		</ion-label>
+	</ion-item>
+	<h1>Imagem de Destaque</h1>
+	<img
       src="{{ amigos?.destaquePerfil }}"
     />
-	<img
-      src="{{ amigos?.imagemPerfil }}"
-    />
-    <p>Perfil de {{ amigos?.tipoUsuario }}</p>
-	<h1>DESCRICAO:</h1>
-	<p>{{ amigos?.descricaoPerfil }}</p>
-
+            <ion-item lines="full">
+          <ion-icon slot="start" name="moon"></ion-icon>
+          <ion-label>
+            Toggle Dark Theme
+          </ion-label>
+          <ion-toggle id="themeToggle" slot="end"></ion-toggle>
+        </ion-item>
 </ion-content>

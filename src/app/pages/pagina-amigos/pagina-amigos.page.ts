@@ -24,7 +24,7 @@ export class PaginaAmigosPage implements OnInit {
     public navCtrl: NavController,
     public http: HttpClient,
     public amiSer: AmigosService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) {}
 
   ngOnInit() {
