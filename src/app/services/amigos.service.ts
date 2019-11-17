@@ -20,9 +20,6 @@ constructor(public http: HttpClient) {
   }
 
   getAmigoID(idSeguido) {
-
-    console.log("SEGUINDO "+idSeguido);
-
     return this.http.get<Amigos[]>(
       "https://sleepy-river-60466.herokuapp.com/user/perfil/p?u=" + idSeguido
     );

@@ -1,0 +1,25 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title *ngIf="!isSearchbarOpened">Comunidade</ion-title>
+		<ion-searchbar placeholder="Pesquisa" (ionChange)="buscarJogos($event)" *ngIf="isSearchbarOpened"
+			showCancelButton="true" (ionCancel)="isSearchbarOpened = false"></ion-searchbar>
+		<ion-buttons slot="end">
+			<ion-button icon-only *ngIf="!isSearchbarOpened" (click)="isSearchbarOpened = true">
+				<ion-icon name="md-search" style="color: white"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<ion-list>
+		<ion-item text-wrap *ngFor="let amigo of amigos" [routerLink]="['/pagina-amigos', amigo.idSeguido]">
+			<img src="{{ amigo.imagemPerfil }}" />
+			<ion-label text-wrap>
+				<p>{{ amigo.nomePerfil }}</p>
+			</ion-label>
+		</ion-item>
+	</ion-list>
+</ion-content>

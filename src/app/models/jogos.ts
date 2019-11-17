@@ -8,4 +8,6 @@ export interface Jogo {
   imagem2: string;
   imagem3: string;
   imagem4: string;
+  produtora: number;
+  nomePerfil: string;
 }

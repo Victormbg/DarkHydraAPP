@@ -1,0 +1,53 @@
+ion-card-title {
+  text-align: center;
+  color: black;
+}
+
+ion-menu-button {
+  color: white;
+}
+
+ion-content {
+  --ion-background-color: #101010;
+}
+
+ion-toolbar {
+  --ion-background-color: black;
+}
+
+ion-title {
+  color: white;
+  font-size: 30px;
+}
+
+ion-toolbar {
+  --ion-background-color: black;
+}
+
+ion-searchbar {
+  --placeholder-color: black;
+  --icon-color: black;
+  --color: black;
+  --cancel-button-color: black;
+  --background: white;
+}
+
+ion-item img {
+  width: 150px;
+  height: 100px;
+}
+
+ion-item {
+  color: white;
+  margin-bottom: 5px;
+  margin-top: 2px;
+}
+
+ion-label p {
+  margin-left: 10px;
+  color: white;
+  padding: 5px;
+  font-size: 16px;
+  font-family: "Titillium Web", sans-serif;
+}
+

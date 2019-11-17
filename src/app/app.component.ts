@@ -17,6 +17,11 @@ export class AppComponent {
       icon: 'md-cart'
     },
     {
+      title: 'Comunidade',
+      url: '/comunidade',
+      icon: 'md-contacts'
+    },
+    {
       title: 'Bibliotecas',
       url: '/biblioteca',
       icon: 'folder-open'

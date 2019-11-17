@@ -24,6 +24,7 @@ export class PaginaJogoPage implements OnInit {
   imagem2: string;
   imagem3: string;
   imagem4: string;
+  produtora: number;
   // DECLARACAO DOS COMENTARIOS
   idComentario: number;
   idPerfil: number;
