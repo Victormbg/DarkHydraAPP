@@ -15,10 +15,10 @@
 </ion-header>
 <ion-content>
 	<ion-list>
-		<ion-item text-wrap *ngFor="let amigo of amigos" [routerLink]="['/pagina-amigos', amigo.idSeguido]">
-			<img src="{{ amigo.imagemPerfil }}" />
+		<ion-item text-wrap *ngFor="let perfil of perfis | filtro-perfil: textoBuscar" [routerLink]="['/pagina-amigos', perfil.idSeguido]">
+			<img src="{{ perfil.imagemPerfil }}" />
 			<ion-label text-wrap>
-				<p>{{ amigo.nomePerfil }}</p>
+				<p>{{ perfil.nomePerfil }}</p>
 			</ion-label>
 		</ion-item>
 	</ion-list>

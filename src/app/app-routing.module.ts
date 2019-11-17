@@ -72,8 +72,14 @@ const routes: Routes = [
     path: "login",
     loadChildren: "./pages/auth/login/login.module#LoginPageModule"
   },
-  { path: 'faleconosco', loadChildren: './pages/faleconosco/faleconosco.module#FaleconoscoPageModule' },
-  { path: 'comunidade', loadChildren: './pages/comunidade/comunidade.module#ComunidadePageModule' }
+  {
+    path: "faleconosco",
+    loadChildren: "./pages/faleconosco/faleconosco.module#FaleconoscoPageModule"
+  },
+  {
+    path: "comunidade",
+    loadChildren: "./pages/comunidade/comunidade.module#ComunidadePageModule"
+  }
 ];
 
 @NgModule({

@@ -3,13 +3,13 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { Amigos } from "../models/amigos";
-import { Perfil } from "../models/perfil"
+import { Perfil } from "../models/perfil";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class AmigosService {
-constructor(public http: HttpClient) {
+  constructor(public http: HttpClient) {
     console.log("Service Amigos Ativado");
   }
 
@@ -22,6 +22,12 @@ constructor(public http: HttpClient) {
   getAmigoID(idSeguido) {
     return this.http.get<Amigos[]>(
       "https://sleepy-river-60466.herokuapp.com/user/perfil/p?u=" + idSeguido
+    );
+  }
+
+  getPerfil() {
+    return this.http.get<Perfil[]>(
+      "https://sleepy-river-60466.herokuapp.com/user/perfil/t"
     );
   }
 }
