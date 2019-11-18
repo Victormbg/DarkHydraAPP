@@ -15,7 +15,7 @@
 </ion-header>
 <ion-content>
 	<ion-list>
-		<ion-item text-wrap *ngFor="let perfil of perfis | filtro-perfil: textoBuscar" [routerLink]="['/pagina-amigos', perfil.idSeguido]">
+		<ion-item text-wrap *ngFor="let perfil of perfis" [routerLink]="['/pagina-amigos', perfil.idPerfil]">
 			<img src="{{ perfil.imagemPerfil }}" />
 			<ion-label text-wrap>
 				<p>{{ perfil.nomePerfil }}</p>
