@@ -2,9 +2,11 @@ import { NavController } from "@ionic/angular";
 import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { JogosService } from "../../services/jogos.service";
 import { MenuController } from "@ionic/angular";
-import { Jogo } from "../../models/jogos";
+import { ActivatedRoute } from "@angular/router";
+import { map } from "rxjs/operators";
+import { AmigosService } from "../../services/amigos.service";
+
 
 @Component({
   selector: "app-perfil",
@@ -12,16 +14,29 @@ import { Jogo } from "../../models/jogos";
   styleUrls: ["./perfil.page.scss"]
 })
 export class PerfilPage implements OnInit {
-  jogos: Jogo[] = [];
-  resultado: Observable<any>;
+  amigos = null;
+  idPerfil = null;
+
+  nomePerfil: string;
+  descricaoPerfil: string;
+  imagemPerfil: string;
+  destaquePerfil: string;
+  tipoUsuario: string;
+
   constructor(
     public navCtrl: NavController,
     public http: HttpClient,
-    public jogoServ: JogosService,
-    public menuCtrl: MenuController
-  ) {
-    this.jogoServ.getJogos().subscribe(resp => (this.jogos = resp));
+    public amiSer: AmigosService,
+    private route: ActivatedRoute,
+  ) { }
+
+  ngOnInit() {
+    this.idPerfil = this.route.snapshot.params["idSeguido"];
+
+    this.amiSer.getPerfil(this.idPerfil).subscribe(res => {
+      this.amigos = res;
+      console.log(this.amigos);
+    });
   }
 
-  ngOnInit() {}
 }

@@ -22,7 +22,7 @@ export class ComunidadePage implements OnInit {
     public menuCtrl: MenuController
   ) {
     this.amiServ
-      .getPerfil()
+      .getComunidade()
       .subscribe(resp => ((this.perfis = resp), console.log(this.perfis)));
   }
 

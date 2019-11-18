@@ -1,27 +1,23 @@
 <ion-header>
-	<ion-toolbar>
-		<ion-buttons slot="start">
-			<ion-back-button defaultHref="/amigos"></ion-back-button>
-		</ion-buttons>
-		<ion-title>
-			{{ amigos?.nomePerfil }}
-		</ion-title>
-	</ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/amigos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      {{ amigos?.nomePerfil }}
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content onLoad="loadApp()">
-	<ion-item>
-		<img
-      src="{{ amigos?.imagemPerfil }}"
-        />
-		<ion-label text-wrap>
-			<p>Perfil de {{ amigos?.tipoUsuario }}</p>
-			<h1>DESCRICAO:</h1>
-			<p>{{ amigos?.descricaoPerfil }}</p>
-		</ion-label>
-	</ion-item>
-	<h1>Imagem de Destaque</h1>
-	<img
-      src="{{ amigos?.destaquePerfil }}"
-    />
+<ion-content>
+  <ion-item>
+    <img src="{{ amigos?.imagemPerfil }}" />
+    <ion-label text-wrap>
+      <p>Perfil de {{ amigos?.tipoUsuario }}</p>
+      <h1>DESCRICAO:</h1>
+      <p>{{ amigos?.descricaoPerfil }}</p>
+    </ion-label>
+  </ion-item>
+  <h1>Imagem de Destaque</h1>
+  <img src="{{ amigos?.destaquePerfil }}" />
 </ion-content>

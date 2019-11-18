@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
+
 ion-menu-button {
   color: white;
 }
@@ -13,6 +15,7 @@ ion-header {
 ion-title {
   color: white;
   font-size: 30px;
+  font-family: "Titillium Web", sans-serif;
 }
 
 ion-item {
@@ -24,6 +27,7 @@ ion-item {
   border-top-width: 1px;
   padding: 5px;
   box-shadow: 1px 1px gray;
+  font-family: "Titillium Web", sans-serif;
 }
 
 ion-icon {
@@ -32,52 +36,44 @@ ion-icon {
 }
 
 ion-avatar {
-  margin: auto;
+  margin-left: 135px;
   width: 150px;
   height: 150px;
+  font-family: "Titillium Web", sans-serif;
 }
 
-label {
+ion-label {
+  text-align: center;
   font-size: 25px;
-  color: white;
-  display: flex;
-  margin: auto;
-}
-
-.ion-text-center {
-  text-align: center;
-}
-
-.nome {
-  text-align: center;
-  font-size: 30px;
+  font-family: "Titillium Web", sans-serif;
   color: white;
 }
 
-.des {
+ion-back-button {
+  --color: white;
+}
+
+h1 {
   text-align: center;
   font-size: 20px;
   color: white;
+  font-family: "Titillium Web", sans-serif;
 }
 
 p {
+  text-align: center;
   font-size: 20px;
   color: white;
   padding-left: 10px;
   padding-right: 10px;
-}
-.jogoI {
-  width: 70px;
-  height: 70px;
-}
-ion-card {
-  --background: white;
+  font-family: "Titillium Web", sans-serif;
 }
 
-ion-card-title {
-  text-align: center;
-}
-
-ion-card-content {
-  display: inline;
+ion-item img {
+  width: 100px;
+  //display: block;
+  //margin-left: auto;
+  //margin-right: auto;
+  //margin-top:10px;
+  //width: 50%;
 }
