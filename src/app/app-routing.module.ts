@@ -79,7 +79,8 @@ const routes: Routes = [
   {
     path: "comunidade",
     loadChildren: "./pages/comunidade/comunidade.module#ComunidadePageModule"
-  }
+  },
+  { path: 'regras', loadChildren: './pages/regras/regras.module#RegrasPageModule' }
 ];
 
 @NgModule({
