@@ -16,7 +16,10 @@ import { Jogo } from './../../models/jogos';
 })
 export class PaginaAmigosPage implements OnInit {
   amigos = null;
+  lamigos = null;
+  sigo = null;
   idPerfil = null;
+  seguidores = null;
   jogos: Jogo[] = [];
   nomePerfil: string;
   descricaoPerfil: string;
@@ -29,9 +32,7 @@ export class PaginaAmigosPage implements OnInit {
     public amiSer: AmigosService,
     private route: ActivatedRoute,
     public jogoServ: JogosService,
-  ) {
-    
-  }
+  ) { }
 
   ngOnInit() {
     this.idPerfil = this.route.snapshot.params["idSeguido"];
@@ -39,6 +40,21 @@ export class PaginaAmigosPage implements OnInit {
     this.amiSer.getAmigoID(this.idPerfil).subscribe(res => {
       this.amigos = res;
       console.log(this.amigos);
+    });
+
+    this.amiSer.getAmigo(this.idPerfil).subscribe(res => {
+      this.lamigos = res;
+      console.log(this.lamigos);
+    });
+
+    this.amiSer.getSigo(this.idPerfil).subscribe(res => {
+      this.sigo = res;
+      console.log(this.sigo);
+    });
+
+    this.amiSer.getSeguem(this.idPerfil).subscribe(res => {
+      this.seguidores = res;
+      console.log(this.seguidores);
     });
 
     this.jogoServ.getJogoD(this.idPerfil).subscribe(res => {

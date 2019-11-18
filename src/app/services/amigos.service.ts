@@ -19,7 +19,15 @@ export class AmigosService {
     );
   }
 
+  getPerfilID(idSeguidor) {
+    console.log(idSeguidor);
+    return this.http.get<Amigos[]>(
+      "https://sleepy-river-60466.herokuapp.com/user/perfil/p?u=" + idSeguidor
+    );
+  }
+
   getAmigoID(idSeguido) {
+    console.log(idSeguido);
     return this.http.get<Amigos[]>(
       "https://sleepy-river-60466.herokuapp.com/user/perfil/p?u=" + idSeguido
     );
@@ -48,4 +56,27 @@ export class AmigosService {
       "https://sleepy-river-60466.herokuapp.com/user/perfil/p?u=96101"
     );
   }
+
+  getAmigo(idSeguido) {
+    return this.http.get<Amigos[]>(
+      "https://sleepy-river-60466.herokuapp.com/user/perfil/seguidor/mutuo?u=" +
+        idSeguido
+    );
+  }
+
+  getSigo(idSeguido) {
+    return this.http.get<Amigos[]>(
+      "https://sleepy-river-60466.herokuapp.com/user/perfil/seguidor/sigo?u=" +
+        idSeguido
+    );
+  }
+
+  getSeguem(idSeguido) {
+    return this.http.get<Amigos[]>(
+      "https://sleepy-river-60466.herokuapp.com/user/perfil/seguidor/seguem?u=" +
+        idSeguido
+    );
+  }
+
+
 }

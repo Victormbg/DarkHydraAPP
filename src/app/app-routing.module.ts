@@ -69,6 +69,11 @@ const routes: Routes = [
       "./pages/pagina-amigos/pagina-amigos.module#PaginaAmigosPageModule"
   },
   {
+    path: "pagina-amigos/:idSeguidor",
+    loadChildren:
+      "./pages/pagina-amigos/pagina-amigos.module#PaginaAmigosPageModule"
+  },
+  {
     path: "faleconosco",
     loadChildren: "./pages/faleconosco/faleconosco.module#FaleconoscoPageModule"
   },

@@ -5,4 +5,5 @@ export interface Amigos {
   imagemPerfil: string;
   destaquePerfil: string;
   tipoUsuario: string;
+  idSeguidor: string;
 }

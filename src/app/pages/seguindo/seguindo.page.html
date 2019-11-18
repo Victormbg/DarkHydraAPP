@@ -16,7 +16,7 @@
 </ion-header>
 <ion-content>
 	<ion-list>
-		<ion-item text-wrap *ngFor="let amigo of amigos" [routerLink]="['/pagina-amigos', amigo.idSeguido]">
+		<ion-item text-wrap *ngFor="let amigo of amigos" [routerLink]="['/pagina-amigos', amigo.idSeguido ]">
 			<img src="{{ amigo.imagemPerfil }}" />
 			<ion-label text-wrap>
 				<p>{{ amigo.nomePerfil }}</p>

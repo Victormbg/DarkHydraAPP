@@ -20,6 +20,34 @@
   </ion-item>
   <h1>Imagem de Destaque</h1>
   <img src="{{ amigos?.destaquePerfil }}" />
+  <ion-item *ngFor="let amigo of lamigos | slice:0:1;">
+    <h1 *ngIf="!amigo.deleted">
+      Amigos
+    </h1>
+  </ion-item>
+  <ion-item *ngFor="let amigo of lamigos">
+    <img src="{{ amigo.imagemPerfil }}" />
+    {{ amigo.nomePerfil }}
+  </ion-item>
+  <ion-item *ngFor="let amigo of sigo | slice:0:1;">
+    <h1 *ngIf="!amigo.deleted">
+      Seguindo
+    </h1>
+  </ion-item>
+  <ion-item *ngFor="let amigo of sigo">
+    <img src="{{ amigo.imagemPerfil }}" />
+    {{ amigo.nomePerfil }}
+  </ion-item>
+  <ion-item *ngFor="let amigo of seguidores | slice:0:1;">
+    <h1 *ngIf="!amigo.deleted">
+      Seguidores
+    </h1>
+  </ion-item>
+  <ion-item *ngFor="let amigo of seguidores">
+    <img src="{{ amigo.imagemPerfil }}" />
+    {{ amigo.nomePerfil }}
+  </ion-item>
+
   <ion-item *ngFor="let jogo of jogos | slice:0:1;">
     <ion-icon name="md-game-controller-a"></ion-icon>
     <h1 *ngIf="!jogos.deleted">Jogos deste Desenvolvedor</h1>
