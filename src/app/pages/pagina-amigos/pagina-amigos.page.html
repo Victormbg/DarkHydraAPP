@@ -27,7 +27,7 @@
   </ion-item>
   <ion-item *ngFor="let amigo of lamigos">
     <img src="{{ amigo.imagemPerfil }}" />
-    {{ amigo.nomePerfil }}
+    <p>{{ amigo.nomePerfil }}</p>
   </ion-item>
   <ion-item *ngFor="let amigo of sigo | slice:0:1;">
     <h1 *ngIf="!amigo.deleted">
@@ -36,7 +36,7 @@
   </ion-item>
   <ion-item *ngFor="let amigo of sigo">
     <img src="{{ amigo.imagemPerfil }}" />
-    {{ amigo.nomePerfil }}
+    <p>{{ amigo.nomePerfil }}</p>
   </ion-item>
   <ion-item *ngFor="let amigo of seguidores | slice:0:1;">
     <h1 *ngIf="!amigo.deleted">
@@ -45,7 +45,7 @@
   </ion-item>
   <ion-item *ngFor="let amigo of seguidores">
     <img src="{{ amigo.imagemPerfil }}" />
-    {{ amigo.nomePerfil }}
+    <p>{{ amigo.nomePerfil }}</p>
   </ion-item>
 
   <ion-item *ngFor="let jogo of jogos | slice:0:1;">
