@@ -20,8 +20,9 @@
   </ion-item>
   <h1>Imagem de Destaque</h1>
   <img src="{{ amigos?.destaquePerfil }}" />
-  <ion-item *ngFor="let jogo of jogos">
-    <h1 *ngIf="!jogo.deleted">Jogos deste Desenvolvedor</h1>
+  <ion-item *ngFor="let jogo of jogos | slice:0:1;">
+    <ion-icon name="md-game-controller-a"></ion-icon>
+    <h1 *ngIf="!jogos.deleted">Jogos deste Desenvolvedor</h1>
   </ion-item>
   <ion-list *ngFor="let jogo of jogos">
     <ion-item text-wrap [routerLink]="['/pagina-jogo', jogo.idJogo]">
