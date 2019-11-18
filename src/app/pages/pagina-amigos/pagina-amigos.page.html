@@ -20,4 +20,15 @@
   </ion-item>
   <h1>Imagem de Destaque</h1>
   <img src="{{ amigos?.destaquePerfil }}" />
+  <ion-item *ngFor="let jogo of jogos">
+    <h1 *ngIf="!jogo.deleted">Jogos deste Desenvolvedor</h1>
+  </ion-item>
+  <ion-list *ngFor="let jogo of jogos">
+    <ion-item text-wrap [routerLink]="['/pagina-jogo', jogo.idJogo]">
+      <img src="{{ jogo.imagem1 }}" />
+      <ion-label text-wrap>
+        <p>{{ jogo.tituloJogo }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

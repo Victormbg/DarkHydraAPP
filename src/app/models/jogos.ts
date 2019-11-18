@@ -10,4 +10,5 @@ export interface Jogo {
   imagem4: string;
   produtora: number;
   nomePerfil: string;
+  idSeguido: number;
 }

@@ -22,7 +22,7 @@ export class SeguindoPage implements OnInit {
     public amiServ: AmigosService,
     public menuCtrl: MenuController
   ) { 
-    this.amiServ.getAmigos().subscribe(resp => (this.amigos = resp, console.log(this.amigos)));
+    this.amiServ.getSeguindo().subscribe(resp => (this.amigos = resp, console.log(this.amigos)));
   }
 
   ngOnInit() {

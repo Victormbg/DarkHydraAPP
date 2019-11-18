@@ -31,6 +31,12 @@ export class AmigosService {
     );
   }
 
+  getSeguidores() {
+    return this.http.get<Amigos[]>(
+      "https://sleepy-river-60466.herokuapp.com/user/perfil/seguidor/seguem?u=96101"
+    );
+  }
+
   getSeguindo() {
     return this.http.get<Amigos[]>(
       "https://sleepy-river-60466.herokuapp.com/user/perfil/seguidor/sigo?u=96101"

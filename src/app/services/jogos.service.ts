@@ -1,3 +1,4 @@
+import { Amigos } from './../models/amigos';
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
@@ -36,4 +37,11 @@ export class JogosService {
       "https://sleepy-river-60466.herokuapp.com/jogos/m?u=96101"
     );
   }
+
+  getJogoD(idSeguido) {
+    return this.http.get<Jogo[]>(
+      "https://sleepy-river-60466.herokuapp.com/jogos/e?u=" + idSeguido
+    );
+  }
+
 }
