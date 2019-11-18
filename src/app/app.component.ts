@@ -14,7 +14,7 @@ export class AppComponent {
     {
       title: 'Loja',
       url: '/tabs',
-      icon: 'md-cart'
+      icon: 'md-basket'
     },
     {
       title: 'Comunidade',
@@ -22,7 +22,7 @@ export class AppComponent {
       icon: 'md-contacts'
     },
     {
-      title: 'Bibliotecas',
+      title: 'Jogos',
       url: '/biblioteca',
       icon: 'folder-open'
     },

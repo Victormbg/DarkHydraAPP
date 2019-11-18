@@ -53,3 +53,12 @@ https://sleepy-river-60466.herokuapp.com/user/perfil/seguidor/mutuo?u=96101
 
 # LINK API perfil
 https://sleepy-river-60466.herokuapp.com/user/perfil/p?u=17904
+
+# LINK API SEGUINDO
+https://sleepy-river-60466.herokuapp.com/user/perfil/seguidor/sigo?u=96101
+
+# LINK API SEGUIDORES
+https://sleepy-river-60466.herokuapp.com/user/perfil/seguidor/seguem?u=96101
+
+# LINK API BIBLIOTECA
+https://sleepy-river-60466.herokuapp.com/jogos/m?u=96101

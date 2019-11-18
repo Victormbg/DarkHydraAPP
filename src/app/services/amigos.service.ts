@@ -30,4 +30,10 @@ export class AmigosService {
       "https://sleepy-river-60466.herokuapp.com/user/perfil/t"
     );
   }
+
+  getSeguindo() {
+    return this.http.get<Amigos[]>(
+      "https://sleepy-river-60466.herokuapp.com/user/perfil/seguidor/sigo?u=96101"
+    );
+  }
 }

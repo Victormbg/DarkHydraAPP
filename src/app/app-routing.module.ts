@@ -69,10 +69,6 @@ const routes: Routes = [
       "./pages/pagina-amigos/pagina-amigos.module#PaginaAmigosPageModule"
   },
   {
-    path: "login",
-    loadChildren: "./pages/auth/login/login.module#LoginPageModule"
-  },
-  {
     path: "faleconosco",
     loadChildren: "./pages/faleconosco/faleconosco.module#FaleconoscoPageModule"
   },
@@ -80,7 +76,8 @@ const routes: Routes = [
     path: "comunidade",
     loadChildren: "./pages/comunidade/comunidade.module#ComunidadePageModule"
   },
-  { path: 'regras', loadChildren: './pages/regras/regras.module#RegrasPageModule' }
+  { path: 'regras', loadChildren: './pages/regras/regras.module#RegrasPageModule' },
+  { path: 'seguindo', loadChildren: './pages/seguindo/seguindo.module#SeguindoPageModule' }
 ];
 
 @NgModule({

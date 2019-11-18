@@ -30,4 +30,10 @@ export class JogosService {
       "https://sleepy-river-60466.herokuapp.com/jogos/comentario?id=" + idJogo
     );
   }
+
+  getBiblioteca() {
+    return this.http.get<Jogo[]>(
+      "https://sleepy-river-60466.herokuapp.com/jogos/m?u=96101"
+    );
+  }
 }
