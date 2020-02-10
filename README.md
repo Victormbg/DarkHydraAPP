@@ -15,10 +15,10 @@ E possivel o usuario acessar a comunidade e adicionar novos amigos e acessar a l
 TELA DE LOGIN
 </p>
 <p align="center">
-<img src="/ajuda/perfil.jpg" width="300px"><br>
+<img src="/ajuda/perfil.png" width="300px"><br>
 TELA DE PERFIL
 </p>
 <p align="center">
-<img src="/ajuda/SOBRE.jpg" width="300px"><br>
+<img src="/ajuda/sobre.png" width="300px"><br>
 TELA DE SOBRE
 </p>
