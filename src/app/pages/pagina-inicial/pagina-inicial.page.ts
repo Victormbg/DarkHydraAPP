@@ -22,7 +22,9 @@ export class PaginaInicialPage implements OnInit {
     public jogoServ: JogosService,
     public menuCtrl: MenuController
   ) {
-    this.jogoServ.getJogos();
+    var jogostest = this.jogoServ.getJogos();
+    //this.desServ.getJogos().subscribe(resp => (this.jogos = resp));
+    console.log(jogostest);
   }
 
   ngOnInit() {}
