@@ -9,7 +9,7 @@ DB_USER - FpNo2uBuSR<br>
 npm install --save firebase
 npm install firebase @angular/fire --save
 https://www.positronx.io/build-ionic-firebase-crud-app-with-angular/
-
+https://github.com/angular/angularfire/blob/master/docs/rtdb/lists.md
 # CONTA
 Email: tcctron@gmail.com<br>
 Senha: Pentagrama8<br>
