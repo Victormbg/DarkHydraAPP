@@ -27,13 +27,15 @@ export class JogosService {
   }
 
   getJogos() {
+    var ListaJogos = [];
     this.jogos = this.db.list("/Jogos");
     this.jogos.snapshotChanges(["child_added"]).subscribe(actions => {
       actions.forEach(action => {
         let tituloJogo = action.payload.val().Titulo_Do_Jogo;
         console.log(tituloJogo);
+        ListaJogos.push(tituloJogo);
       });
-      return this.jogos;
+      return ListaJogos;
     });
   }
 
