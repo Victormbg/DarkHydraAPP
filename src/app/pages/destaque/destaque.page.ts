@@ -1,11 +1,12 @@
+
 import { Component, OnInit } from "@angular/core";
 import { NavController } from "@ionic/angular";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { MenuController } from "@ionic/angular";
-import { Destaque } from "../../models/destaque";
-import { DestaqueService } from "../../services/destaque.service";
 
+import { Destaque } from './../../models/destaque';
+import { JogosService } from '../../services/jogos/jogos.service';
 @Component({
   selector: "app-destaque",
   templateUrl: "./destaque.page.html",
@@ -21,10 +22,21 @@ export class DestaquePage implements OnInit {
   constructor(
     public navCtrl: NavController,
     public http: HttpClient,
-    public desServ: DestaqueService,
+    public jogoServ: JogosService,
     public menuCtrl: MenuController
-  ) {
-    this.desServ.getJogos().subscribe(resp => (this.jogos = resp));
+  ) {}
+
+  ngOnInit() {
+    const BancoRef = this.jogoServ.getJogos();
+    BancoRef.snapshotChanges(["child_added"]).subscribe(res => {
+      this.jogos = [];
+      res.forEach(jogo => {
+        const tituloJogo = jogo.payload.val().Titulo_Do_Jogo;
+        const imagem1 = jogo.payload.val().Imagem1_Do_Jogo;
+        console.log(tituloJogo, imagem1);
+        this.jogos.push(tituloJogo as Destaque, imagem1 as Destaque);
+      });
+    });
   }
 
   ionRefresh(event) {
@@ -40,7 +52,6 @@ export class DestaquePage implements OnInit {
   ionStart(event) {
     console.log("ionStart Event Triggered!");
   }
-  ngOnInit() {}
 
   sliderConfig = {
     spaceBetween: 5,
