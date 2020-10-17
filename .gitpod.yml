@@ -20,3 +20,14 @@ vscode:
     - aaron-bond.better-comments@2.0.5:YKNfOclR4e8XAxlj4xp2AA==
     - esbenp.prettier-vscode@2.3.0:1F0Pvb/ORZ/T+b60LIMs8w==
     - quicktype.quicktype@12.0.46:f45bY/ldS1sS4TJ6ZLBsxA==
+
+ports:
+  - port: 8100
+    onOpen: open-preview
+  - port: 9000-9999
+    onOpen: ignore
+
+tasks:
+  - before: npm install -g @ionic/cli
+    init: npm install
+    command: ionic serve -- --disableHostCheck
