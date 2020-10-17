@@ -1,0 +1,23 @@
+{
+  "Jogos": {
+    "-MHbo2PiEwW8v-l2YbZI": {
+      "Descricao_Do_Usuario": "123",
+      "Imagem1_Do_Jogo": "6",
+      "Imagem2_Do_Jogo": "6",
+      "Imagem3_Do_Jogo": "6",
+      "Imagem4_Do_Jogo": "6",
+      "Tags_Do_Jogo": "324",
+      "Titulo_Do_Jogo": "Mario"
+    }
+  },
+  "Usuario": {
+    "-M1bo2PiEwW8v-l2YbZI": {
+      "nomePerfil": "Victor",
+      "tipoUsuario": "",
+      "descricaoPerfil": "gosta de jogar",
+      "destaquePerfil": "img",
+      "idPerfil": "1",
+      "imagemPerfil": "324"
+    }
+  }
+}
