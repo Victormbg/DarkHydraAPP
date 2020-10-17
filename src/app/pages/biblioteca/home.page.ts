@@ -2,7 +2,7 @@ import { NavController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { JogosService } from '../../services/jogos.service';
+import { JogosService } from '../../services/jogos/jogos.service';
 import { MenuController } from '@ionic/angular';
 import { Jogo } from '../../models/jogos';
 

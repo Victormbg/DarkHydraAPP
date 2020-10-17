@@ -3,7 +3,7 @@ import { ViewChild } from "@angular/core";
 import { IonSlides } from "@ionic/angular";
 import { NavController } from "@ionic/angular";
 import { HttpClient } from "@angular/common/http";
-import { JogosService } from "../../services/jogos.service";
+import { JogosService } from "../../services/jogos/jogos.service";
 import { ActivatedRoute } from "@angular/router";
 import { map } from "rxjs/operators";
 

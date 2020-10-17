@@ -3,7 +3,7 @@ import { NavController } from "@ionic/angular";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { MenuController } from "@ionic/angular";
-import { AmigosService } from "../../services/amigos.service";
+import { AmigosService } from "../../services/amigos/amigos.service";
 import { Amigos } from "../../models/amigos";
 
 @Component({

@@ -5,7 +5,7 @@ import { Observable } from "rxjs";
 import { MenuController } from "@ionic/angular";
 import { ActivatedRoute } from "@angular/router";
 import { map } from "rxjs/operators";
-import { AmigosService } from "../../services/amigos.service";
+import { AmigosService } from "../../services/amigos/amigos.service";
 
 
 @Component({

@@ -4,9 +4,9 @@ import { NavController } from "@ionic/angular";
 import { HttpClient } from "@angular/common/http";
 import { ActivatedRoute } from "@angular/router";
 import { map } from "rxjs/operators";
-import { AmigosService } from "../../services/amigos.service";
+import { AmigosService } from "../../services/amigos/amigos.service";
 import { Amigos } from './../../models/amigos';
-import { JogosService } from './../../services/jogos.service';
+import { JogosService } from '../../services/jogos/jogos.service';
 import { Jogo } from './../../models/jogos';
 
 @Component({
