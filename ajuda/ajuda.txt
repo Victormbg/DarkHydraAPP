@@ -8,6 +8,7 @@ DB_USER - FpNo2uBuSR<br>
 # INSTALL FIREBASE:
 npm install --save firebase
 npm install firebase @angular/fire --save
+https://www.positronx.io/build-ionic-firebase-crud-app-with-angular/
 
 # CONTA
 Email: tcctron@gmail.com<br>
