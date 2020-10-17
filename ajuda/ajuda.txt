@@ -5,6 +5,10 @@ APP IONIC DARK HYDRA<br>
 DB_PASSWORD - gJK5MPtqBZ<br>
 DB_USER - FpNo2uBuSR<br>
 
+# INSTALL FIREBASE:
+npm install --save firebase
+npm install firebase @angular/fire --save
+
 # CONTA
 Email: tcctron@gmail.com<br>
 Senha: Pentagrama8<br>
