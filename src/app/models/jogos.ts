@@ -1,4 +1,5 @@
 export interface Jogo {
+  $key: string;
   name: string;
   idJogo: number;
   tituloJogo: string;
