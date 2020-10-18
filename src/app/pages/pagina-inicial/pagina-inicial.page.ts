@@ -18,14 +18,11 @@ export class PaginaInicialPage implements OnInit {
   textoBuscar = "";
   public isSearchbarOpened = false;
 
-  constructor(
-    public jogoServ: JogosService,
-    public menuCtrl: MenuController
-  ) {}
+  constructor(public jogoServ: JogosService, public menuCtrl: MenuController) {}
 
   ngOnInit() {
     const BancoRef = this.jogoServ.getJogos();
-    BancoRef.snapshotChanges(['child_added']).subscribe(res => {
+    BancoRef.snapshotChanges(["child_added"]).subscribe(res => {
       //this.jogos = [];
       res.forEach(jogo => {
         const tituloJogo = jogo.payload.val().Titulo_Do_Jogo;
@@ -36,7 +33,7 @@ export class PaginaInicialPage implements OnInit {
         this.jogos.push(tituloJogo as Jogo, imagem1 as Jogo, tagsJogo as Jogo);
       });
     });
-  }
+    }
 
   ionViewWillEnter() {
     this.menuCtrl.enable(true);
