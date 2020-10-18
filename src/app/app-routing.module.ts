@@ -47,7 +47,7 @@ const routes: Routes = [
     loadChildren: "./pages/pagina-jogo/pagina-jogo.module#PaginaJogoPageModule"
   },
   {
-    path: "pagina-jogo/:idJogo",
+    path: "pagina-jogo/:$key",
     loadChildren: "./pages/pagina-jogo/pagina-jogo.module#PaginaJogoPageModule"
   },
   {
