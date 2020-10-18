@@ -25,13 +25,6 @@ export class PaginaJogoPage implements OnInit {
   imagem3: string;
   imagem4: string;
   produtora: number;
-  // DECLARACAO DOS COMENTARIOS
-  idComentario: number;
-  idPerfil: number;
-  comentario: string;
-  tipoComentario: string;
-  nomePerfil: string;
-  imagemPerfil: string;
   // FUNÇÃO DO SLIDE
   @ViewChild(IonSlides, { static: true }) slides: IonSlides;
   goToSlide() {
@@ -46,13 +39,25 @@ export class PaginaJogoPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.idJogo = this.route.snapshot.params["idJogo"];
-
-    this.jogoSer.getJogoID(this.idJogo);
-
-    this.jogoSer.getComentarios(this.idJogo);
+    this.idJogo = this.route.snapshot.params["$key"];
+    this.jogoSer
+      .getJogoID(this.idJogo)
+      .snapshotChanges()
+      .subscribe(res => {
+        this.jogos = res;
+        console.log(this.jogos);
+      });
   }
-
+}
+/*
+  // DECLARACAO DOS COMENTARIOS
+  idComentario: number;
+  idPerfil: number;
+  comentario: string;
+  tipoComentario: string;
+  nomePerfil: string;
+  imagemPerfil: string;
+  this.jogoSer.getComentarios(this.idJogo);
   enviarComentario() {
     var url =
       "https://sleepy-river-60466.herokuapp.com/jogos/comentario?id=" +
@@ -64,4 +69,4 @@ export class PaginaJogoPage implements OnInit {
       console.log(jogo);
     });
   }
-}
+  */
