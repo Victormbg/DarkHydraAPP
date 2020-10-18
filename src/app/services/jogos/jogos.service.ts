@@ -20,8 +20,6 @@ import { Comentario } from "../../models/comentarios";
 })
 export class JogosService {
   jogos: AngularFireList<any>;
-  //JogoListRef: AngularFireList<any>;
-  //JogoRef: AngularFireObject<any>;
   constructor(public http: HttpClient, private db: AngularFireDatabase) {
     console.log("Service Jogo Ativado");
   }
@@ -31,8 +29,10 @@ export class JogosService {
     return this.jogos;
   }
 
-  getJogoID(idJogo) {
-    this.jogos = this.db.list("/Jogos");
+  getJogoID(idJogo: string) {
+    console.log(idJogo);
+    this.jogos = this.db.list<Jogo[]>("/Jogos/" + idJogo);
+    console.log(JSON.stringify(this.jogos));
     return this.jogos;
   }
 
