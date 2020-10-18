@@ -42,13 +42,13 @@
   <ion-list>
     <ion-item
       text-wrap
-      *ngFor="let jogo of jogos | filtro: textoBuscar"
-      [routerLink]="['/pagina-jogo', jogo.idJogo]"
+      *ngFor="let jogo of ListaJogos | filtro: textoBuscar"
+      [routerLink]="['/pagina-jogo', jogo.$key]"
     >
-      <img src="{{ jogo.imagem1 }}" />
+      <img src="{{ jogo.Imagem1_Do_Jogo }}" />
       <ion-label text-wrap>
-        <p>{{ jogo.tituloJogo }}</p>
-        <p>Tags {{ jogo.tagsJogo }}</p>
+        <p>{{ jogo.Titulo_Do_Jogo }}</p>
+        <p>Tags {{ jogo.Tags_Do_Jogo }}</p>
       </ion-label>
     </ion-item>
   </ion-list>
