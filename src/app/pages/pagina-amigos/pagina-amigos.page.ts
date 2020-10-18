@@ -5,9 +5,9 @@ import { HttpClient } from "@angular/common/http";
 import { ActivatedRoute } from "@angular/router";
 import { map } from "rxjs/operators";
 import { AmigosService } from "../../services/amigos/amigos.service";
-import { Amigos } from './../../models/amigos';
-import { JogosService } from '../../services/jogos/jogos.service';
-import { Jogo } from './../../models/jogos';
+import { Amigos } from "./../../models/amigos";
+import { JogosService } from "../../services/jogos/jogos.service";
+import { Jogo } from "./../../models/jogos";
 
 @Component({
   selector: "app-pagina-amigos",
@@ -31,8 +31,8 @@ export class PaginaAmigosPage implements OnInit {
     public http: HttpClient,
     public amiSer: AmigosService,
     private route: ActivatedRoute,
-    public jogoServ: JogosService,
-  ) { }
+    public jogoServ: JogosService
+  ) {}
 
   ngOnInit() {
     this.idPerfil = this.route.snapshot.params["idSeguido"];
@@ -57,9 +57,6 @@ export class PaginaAmigosPage implements OnInit {
       console.log(this.seguidores);
     });
 
-    this.jogoServ.getJogoD(this.idPerfil).subscribe(res => {
-      this.jogos = res;
-      console.log(this.jogos);
-    });
+    this.jogoServ.getJogoD(this.idPerfil);
   }
 }

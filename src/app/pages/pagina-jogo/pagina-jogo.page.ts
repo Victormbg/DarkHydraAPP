@@ -48,15 +48,9 @@ export class PaginaJogoPage implements OnInit {
   ngOnInit() {
     this.idJogo = this.route.snapshot.params["idJogo"];
 
-    this.jogoSer.getJogoID(this.idJogo).subscribe(res => {
-      this.jogos = res;
-      console.log(this.jogos);
-    });
+    this.jogoSer.getJogoID(this.idJogo);
 
-    this.jogoSer.getComentarios(this.idJogo).subscribe(res => {
-      this.comentarios = res;
-      console.log(this.comentarios);
-    });
+    this.jogoSer.getComentarios(this.idJogo);
   }
 
   enviarComentario() {

@@ -18,8 +18,7 @@ export class HomePage implements OnInit {
 
   public isSearchbarOpened = false;
   constructor(public navCtrl: NavController, public http: HttpClient, public jogoServ: JogosService, public menuCtrl: MenuController) {
-    this.jogoServ.getBiblioteca()
-    .subscribe(resp => this.jogos = resp );
+    this.jogoServ.getBiblioteca();
   }
 
   ionRefresh(event) {
