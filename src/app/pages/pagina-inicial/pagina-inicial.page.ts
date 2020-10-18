@@ -14,7 +14,7 @@ import { Jogo } from "../../models/jogos";
   styleUrls: ["./pagina-inicial.page.scss"]
 })
 export class PaginaInicialPage implements OnInit {
-  jogos: Jogo[] = [];
+  ListaJogos = [];
   textoBuscar = "";
   public isSearchbarOpened = false;
 
@@ -23,14 +23,12 @@ export class PaginaInicialPage implements OnInit {
   ngOnInit() {
     const BancoRef = this.jogoServ.getJogos();
     BancoRef.snapshotChanges(["child_added"]).subscribe(res => {
-      //this.jogos = [];
-      res.forEach(jogo => {
-        const tituloJogo = jogo.payload.val().Titulo_Do_Jogo;
-        const imagem1 = jogo.payload.val().Imagem1_Do_Jogo;
-        const tagsJogo = jogo.payload.val().Tags_Do_Jogo;
-        //this.jogos = tituloJogo;
-        console.log(tituloJogo, imagem1, tagsJogo);
-        this.jogos.push(tituloJogo as Jogo, imagem1 as Jogo, tagsJogo as Jogo);
+      this.ListaJogos = [];
+      res.forEach(item => {
+        let a = item.payload.toJSON();
+        a['$key'] = item.key;
+        this.ListaJogos.push(a as Jogo);
+        console.log(a);
       });
     });
     }
