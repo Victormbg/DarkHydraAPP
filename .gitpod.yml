@@ -21,6 +21,8 @@ vscode:
     - esbenp.prettier-vscode@2.3.0:1F0Pvb/ORZ/T+b60LIMs8w==
     - quicktype.quicktype@12.0.46:f45bY/ldS1sS4TJ6ZLBsxA==
 
+    - CoenraadS.bracket-pair-colorizer-2@0.2.0:R8flOpw1fEZe6KyMNNNqBQ==
+
 ports:
   - port: 8100
     onOpen: open-preview
